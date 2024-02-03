@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <nav class="flex h-12 justify-between items-center fixed w-screen px-10 py-8 bg-slate-300">
+  <nav class="flex h-12 justify-between items-center fixed w-screen px-10 py-8 bg-slate-300 z-10">
     <div class="flex items-center gap-x-4">
       <svg class="h-10 w-10 text-blue-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
@@ -45,7 +45,7 @@
   </nav>
 
   <main>
-    <section id="profile" class="h-screen flex items-center p-32 gap-32">
+    <section id="profile" class="h-screen flex items-center p-32 gap-x-32">
       <div class="flex flex-col gap-y-4">
         <h1 class="text-8xl font-semibold text-nowrap">Front-End</h1>
         <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptas ex ullam fuga aliquid quaerat laboriosam quos eius voluptatem maiores.</p>
@@ -56,8 +56,8 @@
       <div class="flex flex-col justify-end h-screen w-full">
         <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
           <h3 class="text-center text-xl font-semibold ml-12">Hii I'm Developer</h3>
-          <div class="profile w-full h-4/5 bg-blue-500">
-            <img src="../assets/profile.png" alt="profile">
+          <div class="profile w-full h-4/5 bg-gray-300">
+            <img src="../assets/profile2.png" alt="profile">
           </div>
         </div>
       </div>
@@ -68,6 +68,24 @@
           Preview
         </button>
       </div>
+    </section>
+
+    <section id="about-me" class="h-[80vh] py-[100px] bg-gray-100 p-32 flex items-center">
+      <div class="flex gap-x-40">
+        <div class="about-me-profile h-[400px] w-[600px] flex justify-center items-end overflow-hidden bg-blue-400">
+          <img src="../assets/profile.png" alt="profile" class="h-[80%]">
+        </div>
+        <div class="flex flex-col justify-center gap-y-10 w-full">
+          <h1 class="text-center text-6xl font-semibold">About Me</h1>
+          <p class="text-2xl indent-10 leading-10">
+            Hi, my name is Fardee Useng, a 25 year old Front-end Software Developer at ICreativeSystems. I am skilled in using JavaScript, TypeScript and React to create modern and user-friendly applications. Although I have a basic understanding of Back-end development and PostgreSQL databases, my primary interest remains in Front-end development. Additionally, I am keen on expanding my knowledge and skills into mobile application development in the future, preparing myself for new opportunities and challenges in the software industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="h-[80vh]">
+
     </section>
   </main>
 
