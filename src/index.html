@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <nav class="flex h-12 justify-between items-center">
+  <nav class="flex h-12 justify-between items-center fixed w-screen">
     <div class="flex items-center">
       <svg class="h-10 w-10 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
@@ -52,7 +52,34 @@
       </label>
     </div>
   </nav>
-  <main></main>
+
+  <main>
+    <section id="profile" class="h-screen flex items-center p-32 gap-32">
+      <div class="flex flex-col gap-y-4">
+        <h1 class="text-8xl font-semibold text-nowrap">Front-End</h1>
+        <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptas ex ullam fuga aliquid quaerat laboriosam quos eius voluptatem maiores.</p>
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+          Preview
+        </button>
+      </div>
+      <div class="flex flex-col justify-end h-screen w-full">
+        <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
+          <h3 class="text-center text-xl font-semibold ml-12">Hii I'm Developer</h3>
+          <div class="profile w-full h-4/5 bg-blue-500">
+            <img src="../assets/profile.png" alt="profile">
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-y-4">
+        <h1 class="text-8xl font-semibold text-nowrap">Back-End</h1>
+        <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptas ex ullam fuga aliquid quaerat laboriosam quos eius voluptatem maiores.</p>
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+          Preview
+        </button>
+      </div>
+    </section>
+  </main>
+
   <footer></footer>
   <!-- vanila.js -->
   <script src="./script.js"></script>

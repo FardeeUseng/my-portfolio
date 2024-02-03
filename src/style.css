@@ -9,3 +9,20 @@
 body {
   font-family: 'Kanit', sans-serif';
 }
+
+.border-red {
+  border: 1px solid red;
+}
+
+.profile {
+  border-radius: 62% 38% 100% 0% / 61% 100% 0% 39%  ;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.profile > img {
+  height: 82%;
+}
