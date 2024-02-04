@@ -34,3 +34,9 @@ body {
 .about-me-profile {
   border-radius: 62% 38% 65% 35% / 57% 58% 42% 43%;
 }
+
+.edu-line {
+  width: 100px;
+  height: 30px;
+  border: 1px solid red;
+}
