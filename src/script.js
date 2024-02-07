@@ -13,3 +13,27 @@ sections.forEach(section => {
 
   navigationContaner.appendChild(link)
 })
+
+// const activitySections = [
+//   {
+//     title: "title1",
+//     text: "text1",
+//     image: "../assets/profile2.jpg"
+//   },
+//   {
+//     title: "title2",
+//     text: "text2",
+//     image: "../assets/profile2.jpg"
+//   },
+//   {
+//     title: "title3",
+//     text: "text3",
+//     image: "../assets/profile2.jpg"
+//   },
+// ]
+
+// const activityContainer = document.getElementById("activity")
+
+// activityContainer.forEach(activity => {
+
+// })
