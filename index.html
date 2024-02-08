@@ -122,50 +122,14 @@
       </button>
     </section>
 
-    <section id="medium" class="h-[80vh] flex flex-col justify-center px-32 bg-gray-100">
+    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center px-32 py-16 bg-gray-100">
       <h1 class="text-center text-6xl font-semibold">Medium</h1>
-      <div class="medium-content grid grid-cols-3 gap-x-10 mt-10">
-        <div class="min-h-[400px] w-full rounded-lg p-6 bg-white shadow-2xl shadow-slate-300">
-          <h3 class="text-3xl truncate">
-            มาทำความรู้จัก CSS Animation พื้นฐานโดยปราศจาก JavaScript กันเถอะ
-          </h3>
-          <p class="text-base max-w-full max-h-72px line-clamp-3 overflow-hidden my-4 indent-5">
-            CSS Animation คือการใช้ CSS ในการกำหนดการเคลื่อนไหวของ Element นั้น ๆ ทำให้ Element นั้นเคลื่อนไหวตามที่เรากำหนด โดย Property ที่เกี่ยวข้องกับ CSS Animation คราว ๆ จะมีดังนี้
-          </p>
-          <div class="relative">
-            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LHvXQ_b_OvNwu9IPSFT_A.png" alt="activity" class="h-[300px] object-cover">
-            <button type="button" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
-              Preview
-            </button>
-          </div>
-        </div>
-        <div class="min-h-[400px] w-full rounded-lg p-6 bg-white shadow-2xl shadow-slate-300">
-          <h3 class="text-3xl truncate">
-            ลองทำ Responsive Web Design เล่น ๆ กันเถอะ
-          </h3>
-          <p class="text-base max-w-full max-h-72px line-clamp-3 overflow-hidden my-4 indent-5">
-            Medium นี้เราจะมาลองทำ Responsive Web Design แบบง่าย ๆ ด้วย HTML และ CSS โดยที่เราจะสร้างหน้าเว็บให้รองรับการแสดงผลทุกขนาดหน้าจอหรือหน้าเว็บจะปรับขนาดการแสดงผลให้เหมาะสมเมื่อมีการเปลี่ยนขนาดหน้าจอ โดยที่เราจะใช้ CSS Media Queries
-          </p>
-          <div class="relative">
-            <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*NOCLxS0V1PDeMeO2znyWcQ.png" alt="activity" class="h-[300px] object-cover">
-            <button type="button" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
-              Preview
-            </button>
-          </div>
-        </div>
-        <div class="min-h-[400px] w-full rounded-lg p-6 bg-white shadow-2xl shadow-slate-300">
-          <h3 class="text-3xl truncate">Position ใน CSS อีหยั๋งเอ๋ย</h3>
-          <p class="text-base max-w-full max-h-72px line-clamp-3 overflow-hidden my-4 indent-5">
-            Property position ใช้ในการกำหนดตำแหน่งให้กับ element ซึ่งที่เราจะเห็นบ่อยก็จะมีพวกการทำ navbar, sidebar หรืออื่นๆ ที่เราต้องกำหนด position ให้กับมัน โดย property position จะมีค่าดังนี้
-          </p>
-          <div class="relative flex justify-center">
-            <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*Rnm-9JiQKpXDYJOmWyjpEA.png" alt="activity" class="h-[300px] object-cover">
-            <button type="button" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
-              Preview
-            </button>
-          </div>
-        </div>
+      <div id="medium-content" class="medium-content grid grid-cols-3 gap-10 mt-10">
       </div>
+      <button id="more-medium" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 mt-8">
+        <i class="fa-solid fa-arrow-down mr-2"></i>
+        More
+      </button>
     </section>
 
     <section id="experience" class="h-[70vh] px-32 flex gap-y-28 flex-col justify-center">

@@ -18,7 +18,6 @@ sections.forEach(section => {
 // end navbar
 
 // start activity section
-
 const activitySections = [
   {
     title: "องค์การบริหารนักศึกษาชาย มหาวิทยาลัยฟาฏอนี",
@@ -56,7 +55,7 @@ const activitySections = [
     imageUrl: "https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/70430496_106018370791690_7908066224037167104_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=4dc865&_nc_ohc=18p3nskMPSsAX8o2TGH&_nc_ht=scontent.fbkk5-5.fna&oh=00_AfB0c9eiIB_8XvKlPlhH2RKPNaak_DkGjqTXihJzu8ussA&oe=65EC28FF",
     activityLink: "https://www.facebook.com/photo/?fbid=106018367458357&set=a.106017684125092"
   }
-]
+];
 
 const activityContainer = document.getElementById("activity-content");
 
@@ -78,7 +77,8 @@ const showActivityItems = (lastIndex) => {
           Preview
         </button>
       </div>
-    `
+    `;
+
     activityContainer.appendChild(activityItem);
   });
 }
@@ -89,22 +89,108 @@ showActivityItems(3);
 // start user click to see more activity
 const showActivityMoreBtn = document.getElementById("more-acctivity");
 
-let isExpended = false;
+let isActivityExpended = false;
 
 showActivityMoreBtn.addEventListener('click', () => {
-  
-  if (!isExpended) {
+  if (!isActivityExpended) {
     showActivityItems(activitySections.length);
     
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
-    isExpended = true;
+    isActivityExpended = true;
   } else {
     showActivityItems(3);
 
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
-    isExpended = false;
+    isActivityExpended = false;
   }
 })
-// end user click to see more activity
-
 // end activity section
+
+// start medium
+const mediumSections = [
+  {
+    title: "มาทำความรู้จัก CSS Animation พื้นฐานโดยปราศจาก JavaScript กันเถอะ",
+    content: "CSS Animation คือการใช้ CSS ในการกำหนดการเคลื่อนไหวของ Element นั้น ๆ ทำให้ Element นั้นเคลื่อนไหวตามที่เรากำหนด โดย Property ที่เกี่ยวข้องกับ CSS Animation คราว ๆ จะมีดังนี้",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_LHvXQ_b_OvNwu9IPSFT_A.png",
+    mediumLink: "https://medium.com/@fardee.tat/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-css-animation-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99-%E0%B9%86-%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%A8%E0%B8%88%E0%B8%B2%E0%B8%81-javascript-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-09d7b43ec947"
+  },
+  {
+    title: "ลองทำ Responsive Web Design เล่น ๆ กันเถอะ",
+    content: "Medium นี้เราจะมาลองทำ Responsive Web Design แบบง่าย ๆ ด้วย HTML และ CSS โดยที่เราจะสร้างหน้าเว็บให้รองรับการแสดงผลทุกขนาดหน้าจอหรือหน้าเว็บจะปรับขนาดการแสดงผลให้เหมาะสมเมื่อมีการเปลี่ยนขนาดหน้าจอ โดยที่เราจะใช้ CSS Media Queries",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*NOCLxS0V1PDeMeO2znyWcQ.png",
+    mediumLink: "https://medium.com/@fardee.tat/%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B3-web-responsive-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99-%E0%B9%86-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%96%E0%B8%AD%E0%B8%B0-651bd713083d"
+  },
+  {
+    title: "กว่าจะมาเป็น Front-end Developer",
+    content: "ก่อนอื่นต้องบอกเลยผมเองเป็นเด็กจาก3จังหวัดที่ตั้งแต่เล็กจนจะเข้าเรียนมหาลัยแทบไม่มีพื้นฐานทางด้าน IT อะไรเลย ตอนนั้นยังจำได้ตอนที่รุ่นพี่มาแนะแนวมหาลัยเอกชนแห่งหนึ่งแล้วมีการแนะนำสาขาเทคโนโลยีสารสนเทศ สำหรับเราที่เป็นเด็กบ้านนอกแล้วที่ได้ยินสาขานี้ รู้สึกได้เลย ตอนนั้น โอโฮ้!! สาขานี้เจ่งอ่ะ น่าเข้าอ่ะ ก็เลยสมัครเข้ารอบแรก แล้วก็ติดเลย เพราะด้วยเป็นมหาลัยเอกชนแล้วก็ต้องการคนด้วย ก็เลยติดสาขานั้นอย่างง่ายดาย",
+    imageUrl: "./assets/profile/profile2Row.jpg",
+    mediumLink: "https://medium.com/@fardee.tat/%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%88%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99-front-end-developer-efa01ed932e9"
+  },
+  {
+    title: "Position ใน CSS อีหยั๋งเอ๋ย",
+    content: "Property position ใช้ในการกำหนดตำแหน่งให้กับ element ซึ่งที่เราจะเห็นบ่อยก็จะมีพวกการทำ navbar, sidebar หรืออื่นๆ ที่เราต้องกำหนด position ให้กับมัน โดย property position จะมีค่าดังนี้",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*Rnm-9JiQKpXDYJOmWyjpEA.png",
+    mediumLink: "https://medium.com/@fardee.tat/position-%E0%B9%83%E0%B8%99-css-%E0%B8%AD%E0%B8%B5%E0%B8%AB%E0%B8%A2%E0%B8%B1%E0%B9%8B%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B9%8B%E0%B8%A2-fc379133bd0e"
+  },
+  {
+    title: "Display Grid อีหยั๋งเอ๋ย",
+    content: "CSS Grid layout มีไว้สำหรับจัดวาง element(องค์ประกอบ) ต่างๆ บนเว็บของเราให้เป็น columns(แนวตั้ง)และ rows(แนวนอน)ได้เช่นเดียวกันกับตาราง ซึ่งเราสามารถจัดวาง element ต่างๆ ไว้ในตำแหน่งที่เราต้องการได้ ทำให้เว็บได้มีความสวยงานและสมดุลยิ่งขึ้น",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*xa1QD015EXtwnzY1MvPMXw.png",
+    mediumLink: "https://medium.com/@fardee.tat/display-grid-%E0%B8%AD%E0%B8%B5%E0%B8%AB%E0%B8%A2%E0%B8%B1%E0%B9%8B%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B9%8B%E0%B8%A2-17b7fc0e11f6"
+  },
+  {
+    title: "Display ใน CSS อีหยั๊งเอ๋ย",
+    content: "display คือ Property(คุณสมบัติ) ที่ใช้ในการกำหนดการแสดงผลและการจัดวาง Element(องค์ประกอบ) ต่าง ๆใน HTML โดยที่เราสามารถที่กำหนดค่าเพื่อเปลี่ยนวิธีการแสดงผลของ Element นั้น ๆได้ โดย Display Property จะมีหลายตัวแต่ในบทนี้จะอธิบายแค่ตัวพื้นฐานที่เราใช้กันบ่อย โดยจะมีดังต่อไปนี้",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*DvoEWFnYXwKp6zNnjKMdlw.jpeg",
+    mediumLink: "https://medium.com/@fardee.tat/display-css-%E0%B8%AD%E0%B8%B5%E0%B8%A2%E0%B8%B1%E0%B9%8A%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B9%8B%E0%B8%A2-b5df4251923a"
+  }
+];
+
+const mediumContainer = document.getElementById("medium-content");
+
+const showMediumItems = (lastIndex) => {
+  mediumContainer.innerHTML = "";
+
+  mediumSections.slice(0, lastIndex).forEach(medium => {
+    const mediumItem = document.createElement("div");
+    mediumItem.classList.add('min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+
+    mediumItem.innerHTML = `
+      <h3 class="text-3xl truncate">
+        ${medium.title}
+      </h3>
+      <p class="text-base max-w-full max-h-72px line-clamp-3 overflow-hidden my-4 indent-5">
+        ${medium.content}
+      </p>
+      <div class="relative flex justify-center">
+        <img src="${medium.imageUrl}" alt="activity" class="h-[300px] object-cover">
+        <button onClick="window.open('${medium.mediumLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
+          Preview
+        </button>
+      </div>
+    `;
+
+    mediumContainer.appendChild(mediumItem);
+  })
+}
+
+showMediumItems(3);
+
+// start user click to see more activity
+const showMediumMoreBtn = document.getElementById("more-medium");
+
+let isMediumExpended = false;
+
+showMediumMoreBtn.addEventListener('click', () => {
+  if (!isMediumExpended) {
+    showMediumItems(mediumSections.length);
+    
+    showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
+    isMediumExpended = true;
+  } else {
+    showMediumItems(3);
+
+    showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
+    isMediumExpended = false;
+  }
+});
