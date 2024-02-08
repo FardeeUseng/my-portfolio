@@ -15,6 +15,38 @@ sections.forEach(section => {
   navigationContaner.appendChild(link);
 })
 
+// random user name
+const user = [
+  {
+    name: "สุดหล่อ",
+    imageUrl: "https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png"
+  },
+  {
+    name: "สุดสวย",
+    imageUrl: "https://cdn.pixabay.com/photo/2022/03/22/07/46/woman-7084501_960_720.png"
+  },
+  {
+    name: "สุดเท่",
+    imageUrl: "https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027365_960_720.png"
+  },
+  {
+    name: "นิรนาม",
+    imageUrl: "https://cdn.pixabay.com/photo/2016/03/31/20/31/amazed-1295833_960_720.png"
+  },
+];
+
+const userNameElement = document.getElementById("user-name");
+const userAvatarElement = document.getElementById("user-avatar");
+
+const getRandomUser = () => {
+  const randomIndex = Math.floor(Math.random() * user.length);
+
+  userNameElement.textContent = user[randomIndex].name;
+  userAvatarElement.src = user[randomIndex].imageUrl;
+};
+
+getRandomUser()
+
 // end navbar
 
 // start activity section
