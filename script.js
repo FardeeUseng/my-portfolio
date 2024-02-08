@@ -1,6 +1,6 @@
 const sections = [
   "profile", "about-me", "education", "activity",
-  "language", "medium", "experience", "skill", "contact-me"
+  "medium", "experience", "skill", "language", "contact-me"
 ];
 
 const navigationContaner = document.getElementById("navigation");
