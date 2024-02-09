@@ -25,7 +25,7 @@
   </style>
 </head>
 <body>
-  <nav class="flex justify-between items-center fixed w-screen h-12 px-5 md:px-10 py-8 bg-white shadow-md shadow-slate-300 z-10">
+  <nav class="flex justify-between items-center fixed w-screen h-12 px-5 md:px-10 py-8 shadow-md shadow-[var(--shadow-primary)] z-10 bg-[var(--bg-primary)] text-[var(--text-color)]">
     <div class="flex items-center gap-x-4">
       <img id="user-avatar" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png" alt="user avatar" class="w-10 h-10 object-cover rounded-full">
       <p id="user-name" class="font-medium"></p>
@@ -33,7 +33,7 @@
     <div id="navigation" class="hidden lg:flex lg:items-center gap-x-4 ">
     </div>
     <div class="flex gap-x-4">
-      <button>
+      <button id="modeToggleBtn">
         <i class="fa-solid fa-moon"></i>
         <!-- <i class="fa-regular fa-lightbulb"></i> -->
       </button>
@@ -42,7 +42,7 @@
   </nav>
 
   <main>
-    <section id="profile" class="min-h-screen grid grid-cols-12 gap-y-10 sm:gap-y-12 md:gap-y-0 md:gap-x-12 2xl:gap-x-32 px-6 sm:px-16 lg:px-32 mb-12 md:mb-0">
+    <section id="profile" class="min-h-screen grid grid-cols-12 gap-y-10 sm:gap-y-12 md:gap-y-0 md:gap-x-12 2xl:gap-x-32 px-6 sm:px-16 lg:px-32 mb-12 md:mb-0 bg-[var(--bg-primary)] text-[var(--text-color)]">
       <div class="flex md:hidden flex-col justify-end col-span-12 min-h-screen max-h-screen">
         <div class="flex flex-col justify-between items-center gap-y-10 h-4/5 relative ">
           <h3 class="text-center text-xl font-semibold">Hii, I'm Developer</h3>
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section id="about-me" class="lg:min-h-[60vh] xl:min-h-[80vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-gray-100">
+    <section id="about-me" class="lg:min-h-[60vh] xl:min-h-[80vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-secondary)] text-[var(--text-color)]">
       <div class="flex xl:gap-x-20 2xl:gap-x-40">
         <div class="about-me-profile h-[400px] w-[600px] hidden xl:flex justify-center items-end overflow-hidden bg-blue-400 ">
           <img src="./assets/profile/profile.png" alt="profile" class="h-[80%]">
@@ -102,7 +102,7 @@
       </div>
     </section>
 
-    <section id="education" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-y-12 sm:gap-y-16 lg:gap-x-32 gap-y-12 md:gap-y-0 py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32">
+    <section id="education" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-y-12 sm:gap-y-16 lg:gap-x-32 gap-y-12 md:gap-y-0 py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-primary)] text-[var(--text-color)]">
       <div class="flex flex-col items-center gap-2">
         <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Education</h3>
         <div class="hidden md:w-full h-[10px] bg-blue-600"></div>
@@ -130,8 +130,8 @@
       </div>
     </section>
 
-    <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Activity</h1>
+    <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)]">
+      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-[var(--text-color)]">Activity</h1>
       <div id="activity-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
       </div>
       <button id="more-acctivity" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-32">
@@ -140,8 +140,8 @@
       </button>
     </section>
 
-    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-gray-100">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Medium</h1>
+    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)]">
+      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-[var(--text-color)]">Medium</h1>
       <div id="medium-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
       </div>
       <button id="more-medium" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-32">
@@ -150,7 +150,7 @@
       </button>
     </section>
 
-    <section id="experience" class="min-h-[70vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-6 sm:px-16 lg:px-32 py-10 sm:py-16">
+    <section id="experience" class="min-h-[70vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)] text-[var(--text-color)]">
       <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Work Experience</h1>
       <div class="flex flex-col lg:items-center xl:flex-row xl:justify-center xl:gap-x-10 2xl:gap-x-12">
         <div class="flex flex-col gap-y-6">
@@ -195,7 +195,7 @@
       </div>
     </section>
 
-    <section id="skill" class="min-h-[68vh] xl:min-h-[75vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 bg-gray-100 px-6 sm:px-16 lg:px-32 py-10 sm:py-16">
+    <section id="skill" class="min-h-[68vh] xl:min-h-[75vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)] text-[var(--text-color)]">
       <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Skills</h1>
       <div class="grid grid-cols-12 gap-[20px] xl:gap-[50px]">
         <div class="col-span-12 lg:col-span-7 xl:col-span-6 2xl:ml-[150px]">
@@ -234,28 +234,28 @@
       </div>
     </section>
 
-    <section id="language" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-x-20 lg:gap-x-32 gap-y-12 sm:gap-y-16 md:gap-y-0 px-20 lg:px-32 py-10 sm:py-16">
+    <section id="language" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-x-20 lg:gap-x-32 gap-y-12 sm:gap-y-16 md:gap-y-0 px-20 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)] text-[var(--text-color)]">
       <div class="flex flex-col items-center gap-4">
         <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Language</h3>
         <div class="w-full h-[10px] bg-blue-600 hidden md:flex"></div>
       </div>
       <div class="flex flex-col gap-y-4">
         <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
+          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
             TH
           </div>
           <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">Thai: Native</h3>
         </div>
         <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
+          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
             EN
           </div>
           <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">English: Proficient</h3>
         </div>
         <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
+          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
             MY
           </div>
           <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">Malay: Proficient</h3>
@@ -264,7 +264,7 @@
     </section>
   </main>
 
-  <footer id="contact-me" class="min-h-[30vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-22 px-20 lg:px-32 py-10 sm:py-16 bg-gray-100">
+  <footer id="contact-me" class="min-h-[30vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-22 px-20 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)] text-[var(--text-color)]">
     <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Contact Me</h1>
     <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
       <div class="flex items-center gap-x-3">

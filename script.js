@@ -100,7 +100,7 @@ const showActivityItems = (lastIndex) => {
 
   activitySections.slice(0, lastIndex).forEach(activity => {
     const activityItem = document.createElement("div");
-    activityItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    activityItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-[var(--shadow-primary)]');
     activityItem.innerHTML = `
       <h3 class="text-2xl lg:text-3xl truncate">${activity.title}</h3>
       <p class="max-w-full max-h-72px line-clamp-2 overflow-hidden my-4 indent-5">
@@ -196,7 +196,7 @@ const showMediumItems = (lastIndex) => {
 
   mediumSections.slice(0, lastIndex).forEach(medium => {
     const mediumItem = document.createElement("div");
-    mediumItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    mediumItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-[var(--shadow-primary)]');
 
     mediumItem.innerHTML = `
       <h3 class="text-2xl lg:text-3xl truncate">
@@ -243,5 +243,59 @@ showMediumMoreBtn.addEventListener('click', () => {
 
     showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
     isMediumExpended = false;
+  }
+});
+
+// check mode
+const savedMode = localStorage.getItem("mode");
+const modeToggleBtn = document.getElementById("modeToggleBtn");
+
+if (savedMode) {
+  setMode(savedMode);
+} else {
+  setMode('light');
+}
+
+function setMode(mode) {
+  // เซ็ตโหมด
+  document.body.classList.toggle("dark-mode", mode === "dark");
+
+  localStorage.setItem("mode", mode);
+
+  if (mode === "light") {
+    document.documentElement.style.setProperty("--bg-primary", "#000000");
+    document.documentElement.style.setProperty("--bg-secondary", "#000000");
+    document.documentElement.style.setProperty("--text-color", "#ffffff");
+    document.documentElement.style.setProperty("--shadow-primary", "#020617");
+    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
+  } else {
+    document.documentElement.style.setProperty("--bg-primary", "#ffffff");
+    document.documentElement.style.setProperty("--bg-secondary", "#f3f4f6");
+    document.documentElement.style.setProperty("--text-color", "#000000");
+    document.documentElement.style.setProperty("--shadow-primary", "#f1f5f9");
+    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
+  }
+}
+
+// mode toggle
+modeToggleBtn.addEventListener("click", function() {
+  const body = document.body;
+  const currentMode = body.classList.contains("dark-mode") ? "dark" : "light";
+  setMode(currentMode)
+
+  // สลับคลาส dark-mode บน body
+  body.classList.toggle("dark-mode");
+
+  // สลับ CSS Variables ตามโหมด
+  if (currentMode === "light") {
+    document.documentElement.style.setProperty("--bg-primary", "#000000");
+    document.documentElement.style.setProperty("--bg-secondary", "#000000");
+    document.documentElement.style.setProperty("--text-color", "#ffffff");
+    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
+  } else {
+    document.documentElement.style.setProperty("--bg-primary", "#ffffff");
+    document.documentElement.style.setProperty("--bg-secondary", "#f3f4f6");
+    document.documentElement.style.setProperty("--text-color", "#000000");
+    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
   }
 });
