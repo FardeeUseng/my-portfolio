@@ -43,15 +43,19 @@
   </nav>
 
   <main>
-    <section id="profile" class="h-screen flex items-center p-32 gap-x-32">
-      <div class="flex flex-col gap-y-4">
-        <h1 class="text-8xl font-semibold text-nowrap">Front-End</h1>
-        <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptas ex ullam fuga aliquid quaerat laboriosam quos eius voluptatem maiores.</p>
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+    <section id="profile" class="h-screen grid grid-cols-3 px-32 xl:gap-x-12 2xl:gap-x-32">
+      <div class="flex flex-col justify-center gap-y-4 w-full">
+        <h1 class="xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Front-End</h1>
+        <ul class="leading-9 ml-1">
+          <li class="truncate">Developed user interfaces with React, TypeScript, and Material UI.</li>
+          <li class="truncate">Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
+          <li class="truncate">Develop a responsive and user friendly.</li>
+        </ul>
+        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
           Preview
         </button>
       </div>
-      <div class="flex flex-col justify-end h-screen w-full">
+      <div class="flex flex-col justify-end w-full">
         <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
           <h3 class="text-center text-xl font-semibold">Hii, I'm Developer</h3>
           <div class="profile w-full h-4/5 bg-gray-300">
@@ -59,24 +63,33 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-y-4">
-        <h1 class="text-8xl font-semibold text-nowrap">Back-End</h1>
-        <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptas ex ullam fuga aliquid quaerat laboriosam quos eius voluptatem maiores.</p>
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+      <div class="flex flex-col justify-center gap-y-4">
+        <h1 class="xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Back-End</h1>
+        <ul class="leading-9 ml-1">
+          <li class="truncate">Developed APIs using Golang for back-end.</li>
+          <li class="truncate">Managed PostgreSQL database.</li>
+          <li class="truncate">Utilized Docker and Google Cloud Platform.</li>
+        </ul>
+        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
           Preview
         </button>
       </div>
     </section>
 
     <section id="about-me" class="h-[80vh] py-[100px] bg-gray-100 p-32 flex items-center">
-      <div class="flex gap-x-40">
+      <div class="flex xl:gap-x-20 2xl:gap-x-40">
         <div class="about-me-profile h-[400px] w-[600px] flex justify-center items-end overflow-hidden bg-blue-400">
           <img src="./assets/profile/profile.png" alt="profile" class="h-[80%]">
         </div>
         <div class="flex flex-col justify-center gap-y-10 w-full">
-          <h1 class="text-center text-6xl font-semibold">About Me</h1>
+          <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">About Me</h1>
           <p class="text-2xl indent-10 leading-10">
-            Hi, my name is Fardee Useng, a 25 year old Front-end Software Developer at ICreativeSystems. I am skilled in using JavaScript, TypeScript and React to create modern and user-friendly applications. Although I have a basic understanding of Back-end development and PostgreSQL databases, my primary interest remains in Front-end development. Additionally, I am keen on expanding my knowledge and skills into mobile application development in the future, preparing myself for new opportunities and challenges in the software industry.
+            Hi, my name is Fardee Useng, a 25 year old Front-end Software Developer at ICreativeSystems. 
+            I am skilled in using JavaScript, TypeScript and React to create modern and user-friendly applications. 
+            Although I have a basic understanding of Back-end development and PostgreSQL databases, my primary interest 
+            remains in Front-end development. Additionally, I am keen on expanding my knowledge and skills into mobile 
+            application development in the future, preparing myself for new opportunities and challenges in the software 
+            industry.
           </p>
         </div>
       </div>
@@ -84,7 +97,7 @@
 
     <section id="education" class="h-[40vh] p-32 flex gap-x-32 items-center justify-center">
       <div class="flex flex-col items-center gap-2">
-        <h3 class="text-6xl font-semibold">Education</h3>
+        <h3 class="xl:xl:text-5xl 2xl:text-6xl font-semibold">Education</h3>
         <div class="w-full h-[10px] bg-blue-600" ></div>
       </div>
       <div class="flex flex-col gap-y-6">
@@ -111,7 +124,7 @@
     </section>
 
     <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center px-32 py-10">
-      <h1 class="text-center text-6xl font-semibold">Activity</h1>
+      <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">Activity</h1>
       <div id="activity-content" class="grid grid-cols-3 gap-10 mt-10">
       </div>
       <button id="more-acctivity" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 mt-8">
@@ -121,7 +134,7 @@
     </section>
 
     <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center px-32 py-16 bg-gray-100">
-      <h1 class="text-center text-6xl font-semibold">Medium</h1>
+      <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">Medium</h1>
       <div id="medium-content" class="medium-content grid grid-cols-3 gap-10 mt-10">
       </div>
       <button id="more-medium" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 mt-8">
@@ -130,41 +143,40 @@
       </button>
     </section>
 
-    <section id="experience" class="h-[70vh] px-32 flex gap-y-28 flex-col justify-center">
-      <h1 class="text-center text-6xl font-semibold">Work Experience</h1>
-      <div class="flex justify-center gap-x-12">
+    <section id="experience" class="min-h-[70vh] px-32 flex xl:gap-y-20 2xl:gap-y-28 flex-col justify-center py-16">
+      <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">Work Experience</h1>
+      <div class="flex justify-center xl:gap-x-10 2xl:gap-x-12">
         <div class="flex flex-col gap-y-6">
           <div class="flex gap-x-6">
             <div class="flex items-center gap-x-2">
               <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="tiger" class="w-12 h-12 object-cover rounded-full">
             </div>
             <div>
-              <h3 class="text-4xl font-semibold">Jun 2022 - Aug 2023:</h3>
-              <p class="text-2xl font-semibold mt-2">
+              <h3 class="xl:text-3xl 2xl:text-4xl font-semibold">Jun 2022 - Aug 2023:</h3>
+              <p class="xl:text-xl 2xl:text-2xl font-semibold mt-2">
                 Front-end Developer at ICreativeSystems Co.,Ltd
               </p>
             </div>
           </div>
-          <ul class="ml-[95px] list-disc text-xl leading-9">
+          <ul class="xl:ml-[30px] 2xl:ml-[95px] list-disc text-xl leading-9">
             <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
             <li>Collaborate with designer and Backend teams to ensure seamless <br/> integration of UX/UI designs and APIs.</li>
             <li>Develop a responsive and user friendly.</li>
           </ul>
         </div>
-        <div class="h-full w-2 bg-blue-500"></div>
         <div class="flex flex-col gap-y-6">
           <div class="flex gap-x-6">
             <div class="flex items-center">
               <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="rabbit" class="w-12 h-12 object-cover rounded-full">
             </div>
             <div>
-              <h3 class="text-4xl font-semibold">Set - Dec 2023: </h3>
-              <p class="text-2xl font-semibold mt-2">
+              <h3 class="xl:text-3xl 2xl:text-4xl font-semibold">Set - Dec 2023: </h3>
+              <p class="xl:text-xl 2xl:text-2xl font-semibold mt-2">
                 Full stack Developer at ICreativeSystems Co.,Ltd
               </p>
             </div>
           </div>
-          <ul class="ml-[95px] list-disc text-xl leading-9">
+          <ul class="xl:ml-[30px] 2xl:ml-[95px] list-disc text-xl leading-9">
             <li>Separated responsibilities between Front-end and Back-end.</li>
             <li>Developed front-end using React, TypeScript, and Material UI.</li>
             <li>Developed APIs using Golang for back-end.</li>
@@ -175,15 +187,15 @@
       </div>
     </section>
 
-    <section id="skill" class="h-[75vh] px-32 flex gap-y-28 flex-col justify-center bg-gray-100">
-      <h1 class="text-center text-6xl font-semibold">Skills</h1>
+    <section id="skill" class="min-h-[75vh] px-32 flex gap-y-28 flex-col justify-center bg-gray-100 py-16">
+      <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">Skills</h1>
       <div class="grid grid-cols-12 gap-[50px]">
-        <div class="col-span-6 ml-[150px]">
+        <div class="col-span-6 2xl:ml-[150px]">
           <div class="flex items-center gap-x-4">
             <div class="w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-4xl font-semibold">Front-End : </h1>
+            <h1 class="xl:text-3xl 2xl:text-4xl font-semibold">Front-End : </h1>
           </div>
-          <ul class="ml-[90px] list-disc text-xl leading-8 mt-2">
+          <ul class="ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2">
             <li><span class="font-semibold">Language: </span>JavaScript and TypeScript.</li>
             <li><span class="font-semibold">Library & Framework: </span>ReactJs, Redux and VueJs(basic).</li>
             <li><span class="font-semibold">UI Framework: </span>Material UI, TailwindCSS and Bootstrap.</li>
@@ -191,22 +203,22 @@
             <li><span class="font-semibold">Others: </span>HTML, CSS and SCSS.</li>
           </ul>
         </div>
-        <div class="col-span-6 ml-[150px]">
+        <div class="col-span-6 2xl:ml-[150px]">
           <div class="flex items-center gap-x-4">
             <div class="w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-4xl font-semibold">Back-End : </h1>
+            <h1 class="xl:text-3xl 2xl:text-4xl font-semibold">Back-End : </h1>
           </div>
-          <ul class="ml-[90px] list-disc text-xl leading-8 mt-2">
+          <ul class="ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2">
             <li><span class="font-semibold">Language: </span>Golang and PHP.</li>
             <li><span class="font-semibold">Database: </span>PostgreSQL and MySQL.</li>
           </ul>
         </div>
-        <div class="col-span-6 ml-[150px]">
+        <div class="col-span-6 2xl:ml-[150px]">
           <div class="flex items-center gap-x-4">
             <div class="w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-4xl font-semibold">Tools : </h1>
+            <h1 class="xl:text-3xl 2xl:text-4xl font-semibold">Tools : </h1>
           </div>
-          <ul class="ml-[90px] list-disc text-xl leading-8 mt-2">
+          <ul class="ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2">
             <li>Docker and Google Cloud Platform (Basic).</li>
             <li>Git, Postman, Figma and SourceTree.</li>
           </ul>
@@ -216,7 +228,7 @@
 
     <section id="language" class="h-[40vh] p-32 flex gap-x-32 items-center justify-center">
       <div class="flex flex-col items-center gap-4">
-        <h3 class="text-6xl font-semibold">Language</h3>
+        <h3 class="xl:text-5xl 2xl:text-6xl font-semibold">Language</h3>
         <div class="w-full h-[10px] bg-blue-600"></div>
       </div>
       <div class="flex flex-col gap-y-4">
@@ -224,28 +236,28 @@
           <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
             TH
           </div>
-          <h3 class="text-3xl font-semibold">Thai: Native</h3>
+          <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">Thai: Native</h3>
         </div>
         <div class="w-full h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
           <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
             EN
           </div>
-          <h3 class="text-3xl font-semibold">English: Proficient</h3>
+          <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">English: Proficient</h3>
         </div>
         <div class="w-full h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
           <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
             MY
           </div>
-          <h3 class="text-3xl font-semibold">Malay: Proficient</h3>
+          <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">Malay: Proficient</h3>
         </div>
       </div>
     </section>
 
     <section id="contact-me" class="min-h-[50vh] px-32 flex gap-y-28 flex-col justify-center bg-gray-100">
-      <h1 class="text-center text-6xl font-semibold">Contact Me</h1>
-      <div class="flex justify-center gap-x-10">
+      <h1 class="text-center xl:text-5xl 2xl:text-6xl font-semibold">Contact Me</h1>
+      <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
         <div class="flex items-center gap-x-3">
           <i class="fa-solid fa-phone text-2xl"></i>
           <p class="text-xl">

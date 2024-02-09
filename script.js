@@ -104,7 +104,7 @@ const showActivityItems = (lastIndex) => {
         ${activity.content}
       </p>
       <div class="relative">
-        <img src="${activity.imageUrl}" alt="activity" class="w-full h-[300px] object-cover">
+        <img src="${activity.imageUrl}" alt="activity" class="w-full xl:h-[250px] 2xl:h-[300px] object-cover">
         <button onClick="window.open('${activity.activityLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
           Preview
         </button>
@@ -191,11 +191,11 @@ const showMediumItems = (lastIndex) => {
       <h3 class="text-3xl truncate">
         ${medium.title}
       </h3>
-      <p class="text-base max-w-full max-h-72px line-clamp-3 overflow-hidden my-4 indent-5">
+      <p class="text-base max-w-full max-h-72px xl:line-clamp-2 2xl:line-clamp-3 overflow-hidden my-4 indent-5">
         ${medium.content}
       </p>
       <div class="relative flex justify-center">
-        <img src="${medium.imageUrl}" alt="activity" class="h-[300px] object-cover">
+        <img src="${medium.imageUrl}" alt="activity" class="xl:h-[250px] 2xl:h-[300px] object-cover">
         <button onClick="window.open('${medium.mediumLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
           Preview
         </button>
