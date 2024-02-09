@@ -215,6 +215,10 @@ const showMediumItems = (lastIndex) => {
 
     mediumContainer.appendChild(mediumItem);
   })
+
+  document.getElementById("medium").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 if (windowSize >= 1280) {
@@ -267,13 +271,13 @@ function setMode(mode) {
     document.documentElement.style.setProperty("--bg-secondary", "#000000");
     document.documentElement.style.setProperty("--text-color", "#ffffff");
     document.documentElement.style.setProperty("--shadow-primary", "#020617");
-    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
+    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
   } else {
     document.documentElement.style.setProperty("--bg-primary", "#ffffff");
     document.documentElement.style.setProperty("--bg-secondary", "#f3f4f6");
     document.documentElement.style.setProperty("--text-color", "#000000");
     document.documentElement.style.setProperty("--shadow-primary", "#f1f5f9");
-    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
+    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
   }
 }
 
@@ -291,12 +295,12 @@ modeToggleBtn.addEventListener("click", function() {
     document.documentElement.style.setProperty("--bg-primary", "#000000");
     document.documentElement.style.setProperty("--bg-secondary", "#000000");
     document.documentElement.style.setProperty("--text-color", "#ffffff");
-    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
+    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
   } else {
     document.documentElement.style.setProperty("--bg-primary", "#ffffff");
     document.documentElement.style.setProperty("--bg-secondary", "#f3f4f6");
     document.documentElement.style.setProperty("--text-color", "#000000");
-    modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
+    modeToggleBtn.innerHTML = `<i class="fa-regular fa-lightbulb"></i>`
   }
 });
 
