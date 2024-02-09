@@ -99,15 +99,15 @@ const showActivityItems = (lastIndex) => {
 
   activitySections.slice(0, lastIndex).forEach(activity => {
     const activityItem = document.createElement("div");
-    activityItem.classList.add('min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    activityItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
     activityItem.innerHTML = `
-      <h3 class="text-3xl truncate">${activity.title}</h3>
+      <h3 class="text-2xl lg:text-3xl truncate">${activity.title}</h3>
       <p class="max-w-full max-h-72px line-clamp-2 overflow-hidden my-4 indent-5">
         ${activity.content}
       </p>
       <div class="relative">
-        <img src="${activity.imageUrl}" alt="activity" class="w-full lg:h-[220px] xl:h-[250px] 2xl:h-[300px] object-cover">
-        <button onClick="window.open('${activity.activityLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
+        <img src="${activity.imageUrl}" alt="activity" class="w-full h-[270px] md:h-[180px] lg:h-[220px] xl:h-[250px] 2xl:h-[300px] w-full object-cover" alt="${activity.title}">
+        <button onClick="window.open('${activity.activityLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-32">
           Preview
         </button>
       </div>
@@ -195,17 +195,17 @@ const showMediumItems = (lastIndex) => {
 
   mediumSections.slice(0, lastIndex).forEach(medium => {
     const mediumItem = document.createElement("div");
-    mediumItem.classList.add('min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    mediumItem.classList.add('min-h-[300px]', 'lg:min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
 
     mediumItem.innerHTML = `
-      <h3 class="text-3xl truncate">
+      <h3 class="text-2xl lg:text-3xl truncate">
         ${medium.title}
       </h3>
-      <p class="text-base max-w-full max-h-72px line-clamp-3 xl:line-clamp-2 2xl:line-clamp-3 overflow-hidden my-4 indent-5">
+      <p class="text-base max-w-full max-h-72px line-clamp-2 lg:line-clamp-3 xl:line-clamp-2 2xl:line-clamp-3 overflow-hidden my-4 indent-5">
         ${medium.content}
       </p>
       <div class="relative flex justify-center">
-        <img src="${medium.imageUrl}" alt="activity" class="h-[220px] xl:h-[250px] 2xl:h-[300px] object-cover">
+        <img src="${medium.imageUrl}" alt="activity" class="h-[270px] md:h-[180px] lg:h-[220px] xl:h-[250px] 2xl:h-[300px] w-full object-cover" alt="${medium.title}">
         <button onClick="window.open('${medium.mediumLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
           Preview
         </button>

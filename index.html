@@ -43,19 +43,27 @@
   </nav>
 
   <main>
-    <section id="profile" class="h-screen grid grid-cols-3 px-20 lg:px-32 xl:gap-x-12 2xl:gap-x-32">
-      <div class="flex flex-col justify-center gap-y-4 w-full">
-        <h1 class="text-4xl xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Front-End</h1>
-        <ul class="leading-9 ml-1">
+    <section id="profile" class="min-h-screen grid grid-cols-12 px-16 lg:px-32 gap-y-12 md:gap-y-0 gap-x-12 2xl:gap-x-32 mb-12 md:mb-0">
+      <div class="flex md:hidden flex-col justify-end col-span-12 min-h-screen max-h-screen">
+        <div class="flex flex-col justify-between items-center gap-y-10 h-4/5 relative ">
+          <h3 class="text-center text-xl font-semibold">Hii, I'm Developer</h3>
+          <div class="profile w-[300px] bg-gray-300">
+            <img src="./assets/profile/profile2.png" alt="profile">
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-6 md:col-span-4">
+        <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Front-End</h1>
+        <ul class="leading-7 lg:leading-9 ml-1">
           <li class="truncate">Developed user interfaces with React, TypeScript, and Material UI.</li>
           <li class="truncate">Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
           <li class="truncate">Develop a responsive and user friendly.</li>
         </ul>
-        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-[100px] lg:w-60 ml-1">
           Preview
         </button>
       </div>
-      <div class="flex flex-col justify-end w-full">
+      <div class="hidden md:flex flex-col justify-end w-full md:col-span-4">
         <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
           <h3 class="text-center text-xl font-semibold">Hii, I'm Developer</h3>
           <div class="profile w-full xl:h-4/5 xl:bg-gray-300">
@@ -63,20 +71,20 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col justify-center gap-y-4">
-        <h1 class="text-4xl xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Back-End</h1>
-        <ul class="leading-9 ml-1">
+      <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-6 md:col-span-4">
+        <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-semibold text-nowrap">Back-End</h1>
+        <ul class="leading-7 lg:leading-9 ml-1">
           <li class="truncate">Developed APIs using Golang for back-end.</li>
           <li class="truncate">Managed PostgreSQL database.</li>
           <li class="truncate">Utilized Docker and Google Cloud Platform.</li>
         </ul>
-        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-60 ml-1">
+        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-[100px] lg:w-60 ml-1">
           Preview
         </button>
       </div>
     </section>
 
-    <section id="about-me" class="lg:min-h-[60vh] xl:min-h-[80vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-20 lg:px-32 bg-gray-100">
+    <section id="about-me" class="lg:min-h-[60vh] xl:min-h-[80vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-16 lg:px-32 bg-gray-100">
       <div class="flex xl:gap-x-20 2xl:gap-x-40">
         <div class="about-me-profile h-[400px] w-[600px] hidden xl:flex justify-center items-end overflow-hidden bg-blue-400 ">
           <img src="./assets/profile/profile.png" alt="profile" class="h-[80%]">
@@ -95,15 +103,15 @@
       </div>
     </section>
 
-    <section id="education" class="min-h-[40vh] flex items-center justify-center gap-x-20 lg:gap-x-32 py-[40px] lg:py-[50px] xl:py-[100px] px-20 lg:px-32">
+    <section id="education" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-x-16 lg:gap-x-32 gap-y-12 md:gap-y-0 py-[40px] lg:py-[50px] xl:py-[100px] px-16 lg:px-32">
       <div class="flex flex-col items-center gap-2">
         <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Education</h3>
-        <div class="w-full h-[10px] bg-blue-600" ></div>
+        <div class="hidden md:w-full h-[10px] bg-blue-600"></div>
       </div>
       <div class="flex flex-col gap-y-6">
         <div class="flex gap-x-4">
           <div class="flex items-center">
-            <img src="./assets/education/ftu-logo.png" alt="ftu" class="w-10 h-10">
+            <img src="./assets/education/ftu-logo.png" alt="ftu" class="min-w-10 h-10">
           </div>
           <div>
             <h3 class="text-3xl font-semibold">2017-2018</h3>
@@ -113,7 +121,7 @@
         <div class="w-full h-[10px] bg-gray-200"></div>
         <div class="flex gap-x-4">
           <div class="flex items-center">
-            <img src="./assets/education/ftu-logo.png" alt="ftu" class="w-10 h-10">
+            <img src="./assets/education/ftu-logo.png" alt="ftu" class="min-w-10 h-10">
           </div>
           <div>
             <h3 class="text-3xl font-semibold">2018-2022</h3>
@@ -123,9 +131,9 @@
       </div>
     </section>
 
-    <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center px-20 lg:px-32 py-[40px]">
+    <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center px-16 lg:px-32 py-[40px]">
       <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Activity</h1>
-      <div id="activity-content" class="grid grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mt-10">
+      <div id="activity-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mt-10">
       </div>
       <button id="more-acctivity" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 mt-8">
         <i class="fa-solid fa-arrow-down mr-2"></i>
@@ -133,9 +141,9 @@
       </button>
     </section>
 
-    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center px-20 lg:px-32 py-[40px] bg-gray-100">
+    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center px-16 lg:px-32 py-[40px] bg-gray-100">
       <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Medium</h1>
-      <div id="medium-content" class="grid grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mt-10">
+      <div id="medium-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mt-10">
       </div>
       <button id="more-medium" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 mt-8">
         <i class="fa-solid fa-arrow-down mr-2"></i>
@@ -227,10 +235,10 @@
       </div>
     </section>
 
-    <section id="language" class="min-h-[40vh] flex items-center justify-center gap-x-20 lg:gap-x-32 px-52 lg:px-32 py-16">
+    <section id="language" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-x-20 lg:gap-x-32 gap-y-12 md:gap-y-0 px-20 lg:px-32 py-16">
       <div class="flex flex-col items-center gap-4">
         <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Language</h3>
-        <div class="w-full h-[10px] bg-blue-600"></div>
+        <div class="w-full h-[10px] bg-blue-600 hidden md:flex"></div>
       </div>
       <div class="flex flex-col gap-y-4">
         <div class="flex items-center gap-x-4">
@@ -239,14 +247,14 @@
           </div>
           <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">Thai: Native</h3>
         </div>
-        <div class="w-full h-[7px] bg-gray-200"></div>
+        <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
           <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
             EN
           </div>
           <h3 class="xl:text-2xl 2xl:text-3xl font-semibold">English: Proficient</h3>
         </div>
-        <div class="w-full h-[7px] bg-gray-200"></div>
+        <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
         <div class="flex items-center gap-x-4">
           <div class="flex items-center justify-center rounded-lg bg-black shadow-2xl shadow-slate-300 h-8 w-8 text-white font-medium">
             MY
@@ -260,28 +268,29 @@
       <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Contact Me</h1>
       <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
         <div class="flex items-center gap-x-3">
-          <i class="fa-solid fa-phone text-2xl"></i>
+          <i class="fa-solid fa-phone text-xl md:text-2xl"></i>
           <p class="text-xl">
             <span class="font-semibold">Phone: </span>065-0505-204
           </p>
         </div>
         <div class="flex items-center gap-x-3">
-          <i class="fa-solid fa-envelope text-2xl"></i>
+          <i class="fa-solid fa-envelope text-xl md:text-2xl"></i>
           <p class="text-xl">
             <span class="font-semibold">E-mail: </span>fardee.tat@gmail.com
           </p>
         </div>
         <div class="flex items-center gap-x-3">
-          <i class="fa-brands fa-line text-2xl"></i>
+          <i class="fa-brands fa-line text-xl md:text-2xl"></i>
           <p class="text-xl">
             <span class="font-semibold">Line ID: </span>tat_28204
           </p>
         </div>
         <div class="flex items-center gap-x-3">
-          <i class="fa-brands fa-linkedin text-2xl"></i>
-          <p class="text-xl">
-            <span class="font-semibold">LinkedIn: </span>https://www.linkedin.com/in/fardee-useang-060b88264/
-          </p>
+          <i class="fa-brands fa-linkedin text-xl md:text-2xl"></i>
+          <p class="text-xl truncate">
+            <span class="font-semibold">LinkedIn: </span>
+            <a href="https://www.linkedin.com/in/fardee-useang-060b88264/" target="_blank" rel="noopener noreferrer">Fardee Useng</a>
+          </p>          
         </div>
       </div>
     </section>
