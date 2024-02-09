@@ -11,14 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
+body {
+  font-family: 'Kanit', 'sans-serif';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Kanit', 'sans-serif';
 }
 
 .border-red {
@@ -34,16 +31,15 @@ body {
   align-items: center;
 }
 
-.profile > img {
-  height: 80%;
-}
-
 .about-me-profile {
   border-radius: 62% 38% 65% 35% / 57% 58% 42% 43%;
 }
 
-.edu-line {
-  width: 100px;
-  height: 30px;
-  border: 1px solid red;
+#back-to-top-btn {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top-btn.hidden {
+  opacity: 0;
+  pointer-events: none; /* ปิดการใช้งานปุ่มเมื่อถูกซ่อน */
 }

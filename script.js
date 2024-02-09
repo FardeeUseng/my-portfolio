@@ -299,3 +299,21 @@ modeToggleBtn.addEventListener("click", function() {
     modeToggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`
   }
 });
+
+// scroll to top button
+const backToTopBtn = document.getElementById("back-to-top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 20) {
+    backToTopBtn.classList.remove("hidden");
+  } else {
+    backToTopBtn.classList.add("hidden");
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
