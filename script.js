@@ -35,14 +35,22 @@ const user = [
   },
 ];
 
-const userNameElement = document.getElementById("user-name");
-const userAvatarElement = document.getElementById("user-avatar");
+// for desktop
+const userNameElement = document.getElementById("user-name-descktop");
+const userAvatarElement = document.getElementById("user-avatar-descktop");
+
+// for mobile
+const userNameElMobile = document.getElementById("user-name-mobile");
+const userAvatarElMobile = document.getElementById("user-avatar-mobile");
 
 const getRandomUser = () => {
   const randomIndex = Math.floor(Math.random() * user.length);
 
   userNameElement.textContent = user[randomIndex].name;
   userAvatarElement.src = user[randomIndex].imageUrl;
+
+  userNameElMobile.textContent = user[randomIndex].name;
+  userAvatarElMobile.src = user[randomIndex].imageUrl;
 };
 
 getRandomUser()
