@@ -89,6 +89,8 @@ const activitySections = [
   }
 ];
 
+const windowSize = window.innerWidth;
+
 const activityContainer = document.getElementById("activity-content");
 
 // create element for show activity items
@@ -97,14 +99,14 @@ const showActivityItems = (lastIndex) => {
 
   activitySections.slice(0, lastIndex).forEach(activity => {
     const activityItem = document.createElement("div");
-    activityItem.classList.add('min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    activityItem.classList.add('min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
     activityItem.innerHTML = `
       <h3 class="text-3xl truncate">${activity.title}</h3>
       <p class="max-w-full max-h-72px line-clamp-2 overflow-hidden my-4 indent-5">
         ${activity.content}
       </p>
       <div class="relative">
-        <img src="${activity.imageUrl}" alt="activity" class="w-full xl:h-[250px] 2xl:h-[300px] object-cover">
+        <img src="${activity.imageUrl}" alt="activity" class="w-full lg:h-[220px] xl:h-[250px] 2xl:h-[300px] object-cover">
         <button onClick="window.open('${activity.activityLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
           Preview
         </button>
@@ -116,7 +118,11 @@ const showActivityItems = (lastIndex) => {
 }
 
 // loop activity item
-showActivityItems(3);
+if (windowSize >= 1280) {
+  showActivityItems(3);
+} else {
+  showActivityItems(4);
+}
 
 // start user click to see more activity
 const showActivityMoreBtn = document.getElementById("more-acctivity");
@@ -130,7 +136,11 @@ showActivityMoreBtn.addEventListener('click', () => {
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
     isActivityExpended = true;
   } else {
-    showActivityItems(3);
+    if (windowSize >= 1280) {
+      showActivityItems(3);
+    } else {
+      showActivityItems(4);
+    }
 
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
     isActivityExpended = false;
@@ -185,17 +195,17 @@ const showMediumItems = (lastIndex) => {
 
   mediumSections.slice(0, lastIndex).forEach(medium => {
     const mediumItem = document.createElement("div");
-    mediumItem.classList.add('min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
+    mediumItem.classList.add('min-h-[380px]', 'xl:min-h-[400px]', 'w-full', 'rounded-lg', 'p-6', 'bg-white', 'shadow-2xl', 'shadow-slate-300');
 
     mediumItem.innerHTML = `
       <h3 class="text-3xl truncate">
         ${medium.title}
       </h3>
-      <p class="text-base max-w-full max-h-72px xl:line-clamp-2 2xl:line-clamp-3 overflow-hidden my-4 indent-5">
+      <p class="text-base max-w-full max-h-72px line-clamp-3 xl:line-clamp-2 2xl:line-clamp-3 overflow-hidden my-4 indent-5">
         ${medium.content}
       </p>
       <div class="relative flex justify-center">
-        <img src="${medium.imageUrl}" alt="activity" class="xl:h-[250px] 2xl:h-[300px] object-cover">
+        <img src="${medium.imageUrl}" alt="activity" class="h-[220px] xl:h-[250px] 2xl:h-[300px] object-cover">
         <button onClick="window.open('${medium.mediumLink}', '_blank')" class="text-white absolute bottom-2 right-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 w-32 ml-1">
           Preview
         </button>
@@ -206,7 +216,11 @@ const showMediumItems = (lastIndex) => {
   })
 }
 
-showMediumItems(3);
+if (windowSize >= 1280) {
+  showMediumItems(3);
+} else {
+  showMediumItems(4);
+}
 
 // start user click to see more activity
 const showMediumMoreBtn = document.getElementById("more-medium");
@@ -220,7 +234,11 @@ showMediumMoreBtn.addEventListener('click', () => {
     showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
     isMediumExpended = true;
   } else {
-    showMediumItems(3);
+    if (windowSize >= 1280) {
+      showMediumItems(3);
+    } else {
+      showMediumItems(4);
+    }
 
     showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
     isMediumExpended = false;
