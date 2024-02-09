@@ -25,29 +25,12 @@
   </style>
 </head>
 <body>
-
-  <!-- for desktop -->
-  <nav class="hidden lg:flex justify-between items-center fixed w-screen h-12 px-10 py-8 bg-white shadow-md shadow-slate-300 z-10">
+  <nav class="flex justify-between items-center fixed w-screen h-12 px-5 md:px-10 py-8 bg-white shadow-md shadow-slate-300 z-10">
     <div class="flex items-center gap-x-4">
-      <img id="user-avatar-descktop" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png" alt="user avatar" class="w-10 h-10 object-cover rounded-full">
-      <p id="user-name-descktop" class="font-medium"></p>
+      <img id="user-avatar" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png" alt="user avatar" class="w-10 h-10 object-cover rounded-full">
+      <p id="user-name" class="font-medium"></p>
     </div>
-    <div id="navigation" class="flex items-center gap-x-4 ">
-    </div>
-    <div class="flex gap-x-4">
-      <button>
-        <i class="fa-solid fa-moon"></i>
-        <!-- <i class="fa-regular fa-lightbulb"></i> -->
-      </button>
-      <button>TH</button>
-    </div>
-  </nav>
-
-  <!-- for mobile -->
-  <nav class="flex lg:hidden justify-between items-center fixed w-screen h-12 px-5 md:px-10 py-8 bg-white shadow-md shadow-slate-300 z-10">
-    <div class="flex items-center gap-x-4">
-      <img id="user-avatar-mobile" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png" alt="user avatar" class="w-10 h-10 object-cover rounded-full">
-      <p id="user-name-mobile" class="font-medium"></p>
+    <div id="navigation" class="hidden lg:items-center gap-x-4 ">
     </div>
     <div class="flex gap-x-4">
       <button>
@@ -279,40 +262,38 @@
         </div>
       </div>
     </section>
-
-    <section id="contact-me" class="min-h-[40vh] xl:min-h-[50vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-20 lg:px-32 py-10 sm:py-16 bg-gray-100">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Contact Me</h1>
-      <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
-        <div class="flex items-center gap-x-3">
-          <i class="fa-solid fa-phone text-xl md:text-2xl"></i>
-          <p class="text-xl">
-            <span class="font-semibold">Phone: </span>065-0505-204
-          </p>
-        </div>
-        <div class="flex items-center gap-x-3">
-          <i class="fa-solid fa-envelope text-xl md:text-2xl"></i>
-          <p class="text-xl truncate">
-            <span class="font-semibold">E-mail: </span>fardee.tat@gmail.com
-          </p>
-        </div>
-        <div class="flex items-center gap-x-3">
-          <i class="fa-brands fa-line text-xl md:text-2xl"></i>
-          <p class="text-xl">
-            <span class="font-semibold">Line ID: </span>tat_28204
-          </p>
-        </div>
-        <div class="flex items-center gap-x-3">
-          <i class="fa-brands fa-linkedin text-xl md:text-2xl"></i>
-          <p class="text-xl truncate">
-            <span class="font-semibold">LinkedIn: </span>
-            <a href="https://www.linkedin.com/in/fardee-useang-060b88264/" target="_blank" rel="noopener noreferrer">Fardee Useng</a>
-          </p>          
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer></footer>
+  <footer id="contact-me" class="min-h-[30vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-22 px-20 lg:px-32 py-10 sm:py-16 bg-gray-100">
+    <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-semibold">Contact Me</h1>
+    <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-phone text-xl md:text-2xl"></i>
+        <p class="text-xl">
+          <span class="font-semibold">Phone: </span>065-0505-204
+        </p>
+      </div>
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-envelope text-xl md:text-2xl"></i>
+        <p class="text-xl truncate">
+          <span class="font-semibold">E-mail: </span>fardee.tat@gmail.com
+        </p>
+      </div>
+      <div class="flex items-center gap-x-3">
+        <i class="fa-brands fa-line text-xl md:text-2xl"></i>
+        <p class="text-xl">
+          <span class="font-semibold">Line ID: </span>tat_28204
+        </p>
+      </div>
+      <div class="flex items-center gap-x-3">
+        <i class="fa-brands fa-linkedin text-xl md:text-2xl"></i>
+        <p class="text-xl truncate">
+          <span class="font-semibold">LinkedIn: </span>
+          <a href="https://www.linkedin.com/in/fardee-useang-060b88264/" target="_blank" rel="noopener noreferrer">Fardee Useng</a>
+        </p>          
+      </div>
+    </div>
+  </footer>
   <!-- vanila.js -->
   <script src="./script.js"></script>
 </body>
