@@ -46,7 +46,15 @@ const getRandomUser = () => {
   userAvatarEl.src = user[randomIndex].imageUrl;
 };
 
-getRandomUser()
+getRandomUser();
+
+userAvatarEl.addEventListener('click', () => {
+  getRandomUser();
+})
+
+userNameEl.addEventListener('click', () => {
+  getRandomUser();
+})
 
 // end navbar
 
@@ -326,7 +334,7 @@ backToTopBtn.addEventListener("click", () => {
   });
 });
 
-// change border radius when scroll down
+// change border radius for profile when scroll down
 const profileImgMobile = document.getElementById("profile-image-mobile");
 const profileImgDesk = document.getElementById("profile-image-desktop");
 
