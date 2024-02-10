@@ -383,7 +383,12 @@ preBackBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     profileSection.classList.add('hidden');
-    beSection.classList.remove('hidden')
+    beSection.classList.remove('hidden');
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }, 500)
 });
 

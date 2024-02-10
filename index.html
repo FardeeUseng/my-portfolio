@@ -89,23 +89,23 @@
       </div>
     </section>
 
-    <section id="preview-front-end" class="relative h-screen hidden px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <button id="fe-back-btn" class="absolute right-32 top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-36">
-        Back
-        <i class="fa-solid fa-arrow-right ml-2"></i>
-      </button>
-      <div class="h-full flex flex-col gap-y-10">
-        <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">
-          Front-End Developer
-        </h1>
-        <div class="flex h-full grid grid-cols-12 gap-x-20">
-          <div class="col-span-5 flex items-center">
-            <img src="./assets/profile/front-end.jpg" alt="front-end" class="max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
+    <section id="preview-front-end" class="hidden flex items-center min-h-screen px-6 sm:px-16 lg:px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
+      <h1 class="absolute top-[100px] left-0 w-full text-center sm:text-start lg:text-center text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-medium sm:pl-16">
+        Front-End Developer
+      </h1>
+      <div class="h-full flex flex-col gap-y-10 my-8 w-full relative sm:static">
+        <button id="fe-back-btn" class=" absolute right-4 sm:right-16 lg:right-32 top-4 sm:top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-30 md:w-36">
+          Back
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+        <div class="h-full grid grid-cols-12 gap-y-8 sm:gap-x-10 xl:gap-20 w-full">
+          <div class="col-span-12 xl:col-span-5 flex items-center">
+            <img src="./assets/profile/front-end.jpg" alt="front-end" class="max-h-[250px] sm:max-h-[380px] md:max-h-[450px] xl:max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
           </div>
-          <div class="col-span-7 flex flex-col justify-center">
-            <div class="flex gap-x-6">
+          <div class="col-span-12 xl:col-span-7 flex flex-col justify-center w-full">
+            <div class="flex gap-x-3 gap-x-6">
               <div class="flex items-center gap-x-2">
-                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-20 min-w-20 h-20 min-h-20 object-cover rounded-full">
+                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-12 sm:w-20 min-w-12 sm:min-w-20 h-12 sm:h-20 min-h-12 sm:min-h-20 object-cover rounded-full">
               </div>
               <div>
                 <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
@@ -114,8 +114,8 @@
                 </p>
               </div>
             </div>
-            <ul class="list-disc leading-9 sm:text-xl ml-[50px] xl:ml-[30px] 2xl:ml-[110px] mt-4">
-              <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
+            <ul class="list-disc leading-9 sm:text-xl ml-[25px] sm:ml-[50px] xl:ml-[30px] 2xl:ml-[125px] mt-4">
+              <li class="">Developed user interfaces with React, TypeScript, and Material UI.</li>
               <li>Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
               <li>Develop a responsive and user friendly.</li>
             </ul>
@@ -124,35 +124,37 @@
       </div>
     </section>
 
-    <section id="preview-back-end" class="relative h-screen hidden px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <button id="be-back-btn" class="absolute top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-36">
-        <i class="fa-solid fa-arrow-left mr-2"></i>
-        Back
-      </button>
-      <div class="h-full flex flex-col gap-y-10">
-        <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">
-          Back-End Developer
-        </h1>
-        <div class="flex h-full grid grid-cols-12 gap-x-20">
-          <div class="col-span-5 flex items-center">
-            <img src="./assets/profile/back-end.jpg" alt="front-end" class="max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
+    <section id="preview-back-end" class="hidden flex items-center min-h-screen px-6 sm:px-16 lg:px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
+      <h1 class="absolute top-[100px] left-0 w-full text-center sm:text-start lg:text-center text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-medium sm:pl-16">
+        Back-End Developer
+      </h1>
+      <div class="h-full flex flex-col gap-y-10 my-8 w-full relative sm:static">
+        <button id="be-back-btn" class=" absolute right-4 sm:right-16 lg:right-32 top-4 sm:top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-30 md:w-36">
+          <i class="fa-solid fa-arrow-left mr-2"></i>
+          Back
+        </button>
+        <div class="h-full grid grid-cols-12 gap-y-8 sm:gap-x-10 xl:gap-20 w-full">
+          <div class="col-span-12 xl:col-span-5 flex items-center">
+            <img src="./assets/profile/back-end.jpg" alt="back-end" class="max-h-[250px] sm:max-h-[380px] md:max-h-[450px] xl:max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
           </div>
-          <div class="col-span-7 flex flex-col justify-center">
-            <div class="flex gap-x-6">
+          <div class="col-span-12 xl:col-span-7 flex flex-col justify-center w-full">
+            <div class="flex gap-x-3 gap-x-6">
               <div class="flex items-center gap-x-2">
-                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-20 min-w-20 h-20 min-h-20 object-cover rounded-full">
+                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-12 sm:w-20 min-w-12 sm:min-w-20 h-12 sm:h-20 min-h-12 sm:min-h-20 object-cover rounded-full">
               </div>
               <div>
-                <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
+                <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Set - Dec 2023:</h3>
                 <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                  Front-end Developer at ICreativeSystems Co.,Ltd
+                  Full stack Developer at ICreativeSystems Co.,Ltd
                 </p>
               </div>
             </div>
-            <ul class="list-disc leading-9 sm:text-xl ml-[50px] xl:ml-[30px] 2xl:ml-[110px] mt-4">
-              <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
-              <li>Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
-              <li>Develop a responsive and user friendly.</li>
+            <ul class="list-disc leading-9 sm:text-xl ml-[25px] sm:ml-[50px] xl:ml-[30px] 2xl:ml-[125px] mt-4">
+              <li>Separated responsibilities between Front-end and Back-end.</li>
+              <li>Developed front-end using React, TypeScript, and Material UI.</li>
+              <li>Developed APIs using Golang for back-end.</li>
+              <li>Managed PostgreSQL database.</li>
+              <li>Utilized Docker and Google Cloud Platform.</li>
             </ul>
           </div>
         </div>
