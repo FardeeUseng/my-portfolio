@@ -119,10 +119,12 @@ const showActivityItems = (lastIndex) => {
 }
 
 // loop activity item
-if (windowSize >= 1280) {
-  showActivityItems(3);
-} else {
+if (windowSize <= 767) {
+  showActivityItems(2);
+} else if (windowSize <= 1279) {
   showActivityItems(4);
+} else {
+  showActivityItems(3)
 }
 
 // start user click to see more activity
@@ -137,10 +139,12 @@ showActivityMoreBtn.addEventListener('click', () => {
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
     isActivityExpended = true;
   } else {
-    if (windowSize >= 1280) {
-      showActivityItems(3);
-    } else {
+    if (windowSize <= 767) {
+      showActivityItems(2);
+    } else if (windowSize <= 1279) {
       showActivityItems(4);
+    } else {
+      showActivityItems(3)
     }
 
     showActivityMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
@@ -215,16 +219,14 @@ const showMediumItems = (lastIndex) => {
 
     mediumContainer.appendChild(mediumItem);
   })
-
-  document.getElementById("medium").scrollIntoView({
-    behavior: "smooth"
-  });
 }
 
-if (windowSize >= 1280) {
-  showMediumItems(3);
-} else {
+if (windowSize <= 767) {
+  showMediumItems(2);
+} else if (windowSize <= 1279) {
   showMediumItems(4);
+} else {
+  showMediumItems(3)
 }
 
 // start user click to see more activity
@@ -239,10 +241,12 @@ showMediumMoreBtn.addEventListener('click', () => {
     showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-up mr-2"></i> Less';
     isMediumExpended = true;
   } else {
-    if (windowSize >= 1280) {
-      showMediumItems(3);
-    } else {
+    if (windowSize <= 767) {
+      showMediumItems(2);
+    } else if (windowSize <= 1279) {
       showMediumItems(4);
+    } else {
+      showMediumItems(3)
     }
 
     showMediumMoreBtn.innerHTML = '<i id="more-icon" class="fa-solid fa-arrow-down mr-2"></i> More';
@@ -320,4 +324,24 @@ backToTopBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
+});
+
+// change border radius when scroll down
+const profileImgMobile = document.getElementById("profile-image-mobile");
+const profileImgDesk = document.getElementById("profile-image-desktop");
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 20) {
+    profileImgMobile.classList.add("profile-scroll");
+    profileImgMobile.classList.remove("profile");
+
+    profileImgDesk.classList.add("profile-scroll");
+    profileImgDesk.classList.remove("profile");
+  } else {
+    profileImgMobile.classList.add("profile");
+    profileImgMobile.classList.remove("profile-scroll");
+
+    profileImgDesk.classList.add("profile");
+    profileImgDesk.classList.remove("profile-scroll");
+  }
 });

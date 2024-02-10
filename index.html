@@ -41,15 +41,18 @@
   </nav>
 
   <main>
-    <section id="profile" class="min-h-screen grid grid-cols-12 gap-y-10 sm:gap-y-12 md:gap-y-0 md:gap-x-12 2xl:gap-x-32 sm:px-16 lg:px-32 pb-12 md:pb-0 bg-[var(--bg-primary)] text-[var(--text-color)]">
+    <section id="profile" class="min-h-screen grid grid-cols-12 gap-y-10 sm:gap-y-12 md:gap-y-0 md:gap-x-12 2xl:gap-x-20 sm:px-16 lg:px-32 pb-12 md:pb-0 bg-[var(--bg-primary)] text-[var(--text-color)]">
+      <!-- start for mobile screen -->
       <div class="flex md:hidden flex-col justify-end col-span-12 min-h-screen max-h-screen">
-        <div class="flex flex-col justify-between items-center gap-y-10 h-4/5 relative ">
+        <div class="flex flex-col justify-between items-center gap-y-20 h-4/5 relative ">
           <h3 class="text-center text-xl font-medium">Hii, I'm Developer</h3>
-          <div class="profile w-full sm:w-[300px] bg-gray-300">
-            <img src="./assets/profile/profile2.png" alt="profile" class="h-[80%]">
+          <div id="profile-image-mobile" class="profile w-full  bg-gray-300">
+            <img src="./assets/profile/profile2.png" alt="profile" class="h-[85%]">
           </div>
         </div>
       </div>
+      <!-- end for mobile screen -->
+
       <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-12 sm:col-span-6 md:col-span-4 px-6 sm:px-0">
         <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-medium text-nowrap">Front-End</h1>
         <ul class="leading-7 lg:leading-9 ml-1">
@@ -61,14 +64,18 @@
           Preview
         </button>
       </div>
+
+      <!-- start show for desktop screen -->
       <div class="hidden md:flex flex-col justify-end w-full md:col-span-4">
         <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
           <h3 class="text-center text-xl font-medium">Hii, I'm Developer</h3>
-          <div class="profile w-full xl:h-4/5 xl:bg-gray-300">
-            <img src="./assets/profile/profile2.png" alt="profile" class="h-[80%]">
+          <div id="profile-image-desktop" class="profile w-full h-[85%] xl:bg-gray-300">
+            <img src="./assets/profile/profile2.png" alt="profile" class="h-[85%]">
           </div>
         </div>
       </div>
+      <!-- end show for desktop screen -->
+
       <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-12 sm:col-span-6 md:col-span-4 px-6 sm:px-0">
         <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-medium text-nowrap">Back-End</h1>
         <ul class="leading-7 lg:leading-9 ml-1">
@@ -155,7 +162,7 @@
         <div class="flex flex-col gap-y-6">
           <div class="flex gap-x-6">
             <div class="flex items-center gap-x-2">
-              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="tiger" class="w-16 min-w-16 h-16 xl:w-12 xl:h-12 object-cover rounded-full">
+              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="tiger" class="w-16 min-w-16 h-16 min-h-16 object-cover rounded-full">
             </div>
             <div>
               <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
@@ -174,7 +181,7 @@
         <div class="flex flex-col gap-y-6">
           <div class="flex gap-x-6">
             <div class="flex items-center">
-              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="rabbit" class="w-16 min-w-16 h-16 xl:w-12 xl:h-12 object-cover rounded-full">
+              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="rabbit" class="w-16 min-w-16 h-16 min-h-16 object-cover rounded-full">
             </div>
             <div>
               <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Set - Dec 2023: </h3>
