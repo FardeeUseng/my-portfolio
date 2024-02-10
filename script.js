@@ -353,3 +353,72 @@ window.addEventListener('scroll', () => {
     profileImgDesk.classList.remove("profile-scroll");
   }
 });
+
+// slide for preview front-end
+const profileSection = document.getElementById("profile");
+const preFrontBtn = document.getElementById("front-end-btn");
+
+const feSection = document.getElementById("preview-front-end");
+const beSection = document.getElementById("preview-back-end");
+
+preFrontBtn.addEventListener('click', () => {
+  profileSection.classList.add("slide-out-animation-right");
+
+  setTimeout(() => {
+    profileSection.classList.add('hidden');
+    feSection.classList.remove('hidden');
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, 500)
+});
+
+// slide for preview back-end
+const preBackBtn = document.getElementById("back-end-btn");
+
+preBackBtn.addEventListener('click', () => {
+  profileSection.classList.add("slide-out-animation-left");
+
+  setTimeout(() => {
+    profileSection.classList.add('hidden');
+    beSection.classList.remove('hidden')
+  }, 500)
+});
+
+// back to main page for front-end
+const feBackBtn = document.getElementById("fe-back-btn");
+
+feBackBtn.addEventListener('click', () => {
+  feSection.classList.add('slide-out-animation-left');
+
+  setTimeout(() => {
+    feSection.classList.add('hidden');
+    feSection.classList.remove('slide-out-animation-left');
+    profileSection.classList.remove('hidden', 'slide-out-animation-right');
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, 400);
+});
+
+// back to main page for back-end
+const beBackBtn = document.getElementById("be-back-btn");
+
+beBackBtn.addEventListener('click', () => {
+  beSection.classList.add('slide-out-animation-right');
+
+  setTimeout(() => {
+    beSection.classList.add('hidden');
+    beSection.classList.remove('slide-out-animation-right');
+    profileSection.classList.remove('hidden', 'slide-out-animation-right', 'slide-out-animation-left');
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, 400);
+});

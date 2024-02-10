@@ -9,8 +9,8 @@
 
   <title>Fardee Useng</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <link rel="shortcut icon" href="./assets/portfolio.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="./tailwind-config.js"></script>
@@ -60,7 +60,7 @@
           <li class="truncate">Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
           <li class="truncate">Develop a responsive and user friendly.</li>
         </ul>
-        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
+        <button id="front-end-btn" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
           Preview
         </button>
       </div>
@@ -83,13 +83,83 @@
           <li class="truncate">Managed PostgreSQL database.</li>
           <li class="truncate">Utilized Docker and Google Cloud Platform.</li>
         </ul>
-        <button disabled class="cursor-not-allowed text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
+        <button id="back-end-btn" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
           Preview
         </button>
       </div>
     </section>
 
-    <section id="about-me" class="lg:min-h-[60vh] xl:min-h-[80vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-secondary)] text-[var(--text-color)]">
+    <section id="preview-front-end" class="relative h-screen hidden px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
+      <button id="fe-back-btn" class="absolute right-32 top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-36">
+        Back
+        <i class="fa-solid fa-arrow-right ml-2"></i>
+      </button>
+      <div class="h-full flex flex-col gap-y-10">
+        <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">
+          Front-End Developer
+        </h1>
+        <div class="flex h-full grid grid-cols-12 gap-x-20">
+          <div class="col-span-5 flex items-center">
+            <img src="./assets/profile/front-end.jpg" alt="front-end" class="max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
+          </div>
+          <div class="col-span-7 flex flex-col justify-center">
+            <div class="flex gap-x-6">
+              <div class="flex items-center gap-x-2">
+                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-20 min-w-20 h-20 min-h-20 object-cover rounded-full">
+              </div>
+              <div>
+                <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
+                <p class="text-xl 2xl:text-2xl font-medium mt-2">
+                  Front-end Developer at ICreativeSystems Co.,Ltd
+                </p>
+              </div>
+            </div>
+            <ul class="list-disc leading-9 sm:text-xl ml-[50px] xl:ml-[30px] 2xl:ml-[110px] mt-4">
+              <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
+              <li>Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
+              <li>Develop a responsive and user friendly.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview-back-end" class="relative h-screen hidden px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
+      <button id="be-back-btn" class="absolute top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-36">
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+        Back
+      </button>
+      <div class="h-full flex flex-col gap-y-10">
+        <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">
+          Back-End Developer
+        </h1>
+        <div class="flex h-full grid grid-cols-12 gap-x-20">
+          <div class="col-span-5 flex items-center">
+            <img src="./assets/profile/back-end.jpg" alt="front-end" class="max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
+          </div>
+          <div class="col-span-7 flex flex-col justify-center">
+            <div class="flex gap-x-6">
+              <div class="flex items-center gap-x-2">
+                <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-20 min-w-20 h-20 min-h-20 object-cover rounded-full">
+              </div>
+              <div>
+                <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
+                <p class="text-xl 2xl:text-2xl font-medium mt-2">
+                  Front-end Developer at ICreativeSystems Co.,Ltd
+                </p>
+              </div>
+            </div>
+            <ul class="list-disc leading-9 sm:text-xl ml-[50px] xl:ml-[30px] 2xl:ml-[110px] mt-4">
+              <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
+              <li>Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
+              <li>Develop a responsive and user friendly.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me" class="lg:min-h-[60vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-secondary)] text-[var(--text-color)]">
       <div class="flex xl:gap-x-20 2xl:gap-x-40">
         <div class="about-me-profile h-[400px] w-[600px] hidden xl:flex justify-center items-end overflow-hidden bg-blue-400 ">
           <img src="./assets/profile/profile.png" alt="profile" class="h-[80%]">
@@ -269,7 +339,7 @@
       </div>
     </section>
 
-    <button id="back-to-top-btn" class="hidden fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+    <button id="back-to-top-btn" class="hidden fixed bottom-4 right-4 animate-bounce bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
       <i class="fa-solid fa-arrow-up"></i>
     </button>    
   </main>

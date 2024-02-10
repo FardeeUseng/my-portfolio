@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--bg-primary);
 }
 
 .border-red {
@@ -51,4 +52,34 @@ body {
 #back-to-top-btn.hidden {
   opacity: 0;
   pointer-events: none; /* ปิดการใช้งานปุ่มเมื่อถูกซ่อน */
+}
+
+.slide-out-animation-left {
+  animation: slideOutToLeft 0.7s ease-out forwards;
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.slide-out-animation-right {
+  animation: slideOutToRight 0.7s ease-out forwards;
+}
+
+@keyframes slideOutToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 }
