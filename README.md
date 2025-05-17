@@ -19,4 +19,4 @@
 
 สามารถเข้าชมเว็บไซต์ที่เผยแพร่แล้วได้ที่ลิงก์ด้านล่าง:
 
-👉 [https://fardee-portfolio.vercel.app/en/portfolio](https://fardee-portfolio.vercel.app/en/portfolio)
+👉 [https://fardeeuseng.github.io/my-portfolio/](https://fardeeuseng.github.io/my-portfolio/)
