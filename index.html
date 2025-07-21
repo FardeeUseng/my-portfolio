@@ -8,454 +8,876 @@
   <meta name="keywords" content="portfolio fardee useng">
 
   <title>Fardee Useng</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./assets/portfolio.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./tailwind-config.js"></script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-  
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
     }
-  </style>
+  </script>
 </head>
-<body>
-  <nav class="flex justify-between items-center fixed w-screen h-12 px-5 md:px-10 py-8 shadow-md shadow-[var(--shadow-primary)] z-10 bg-[var(--bg-primary)] text-[var(--text-color)]">
-    <div class="flex items-center gap-x-4">
-      <img id="user-avatar" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_1280.png" alt="user avatar" class="w-10 h-10 object-cover rounded-full cursor-pointer">
-      <p id="user-name" class="font-medium cursor-pointer"></p>
+<body
+  class="
+    flex flex-col items-center
+    bg-neutral-100 dark:bg-neutral-900
+    select-none m-2 sm:m-6
+  "
+>
+  <nav
+    class="
+      sticky top-4 z-10
+      flex justify-between items-center
+      p-2 sm:p-4 h-14 sm:h-16 w-full sm:w-[600px]
+      rounded-xl bg-white dark:bg-neutral-800 shadow-lg
+    "
+  >
+    <div class="flex items-center sm:gap-x-2">
+      <a
+        href="#introduction"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="introduction"
+      >
+        <i class="fa-solid fa-house dark:text-white"></i>
+      </a>
+      <a
+        href="#about-me"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="about-me"
+      >
+        <i class="fa-solid fa-user dark:text-white"></i>
+      </a>
+      <a
+        href="#socials"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="socials"
+      >
+        <i class="fa-solid fa-globe dark:text-white"></i>
+      </a>
+      <a
+        href="#work-experience"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="work-experience"
+      >
+        <i class="fa-solid fa-briefcase dark:text-white"></i>
+      </a>
+      <a
+        href="#education"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="education"
+      >
+        <i class="fa-solid fa-user-graduate dark:text-white"></i>
+      </a>
+      <a
+        href="#skills"
+        class="
+          nav-link
+          flex justify-center items-center
+          rounded-md h-8 sm:h-10 w-8 sm:w-10
+          hover:bg-neutral-200 dark:hover:bg-neutral-900
+        "
+        data-target="skills"
+      >
+        <i class="fa-solid fa-brain dark:text-white"></i>
+      </a>
     </div>
-    <div id="navigation" class="hidden lg:flex lg:items-center gap-x-4 ">
-    </div>
-    <div class="flex gap-x-4">
-      <button id="modeToggleBtn">
-        <i class="fa-solid fa-moon"></i>
+
+    <div class="flex gap-x-2">
+      <button
+        onclick="document.documentElement.classList.toggle('dark')"
+        class="
+          sm:p-2 h-8 sm:h-10 w-8 sm:w-10 rounded-md
+          bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-900
+        "
+      >
+        <i id="theme-icon" class="fa-solid fa-moon dark:text-white"></i>
       </button>
-      <button>EN</button>
+      <a
+        href="./pdf/Fardee-Useng.pdf"
+        download
+        class="
+          inline-flex items-center
+          text-white bg-gray-800 hover:bg-gray-900
+          font-medium rounded-lg text-sm px-2 sm:px-3 sm:py-2
+          dark:bg-neutral-700 dark:hover:bg-neutral-900
+        "
+      >
+        <i class="fa-solid fa-download mr-2"></i>
+        Resume
+      </a>
     </div>
   </nav>
 
-  <main>
-    <section id="profile" class="min-h-screen grid grid-cols-12 gap-y-10 sm:gap-y-12 md:gap-y-0 md:gap-x-12 2xl:gap-x-20 sm:px-16 lg:px-32 pb-12 md:pb-0 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <!-- start for mobile screen -->
-      <div class="flex md:hidden flex-col justify-end col-span-12 min-h-screen max-h-screen">
-        <div class="flex flex-col justify-between items-center gap-y-20 h-4/5 relative ">
-          <h3 class="text-center text-xl font-medium">Hii, I'm Developer</h3>
-          <div id="profile-image-mobile" class="profile w-full  bg-gray-300">
-            <img src="./assets/profile/profile2.png" alt="profile" class="h-[85%]">
-          </div>
+  <main
+    class="
+      flex flex-col gap-y-4
+      bg-white dark:bg-neutral-800 rounded-xl shadow-lg
+      sm:w-[600px] mt-4 sm:p-2
+    "
+  >
+    <section
+      id="introduction"
+      class="p-3 sm:p-5 rounded-xl"
+    >
+      <div class="flex justify-between">
+        <div class="flex items-center gap-x-2 sm:gap-x-3">
+          <i
+            class="
+              fa-solid fa-house
+              text-gray-600 dark:text-gray-300
+            "
+          ></i>
+          <h2 class="text-gray-600 dark:text-gray-300 text-xl">
+            Front-End Developer
+          </h2>
+        </div>
+        <div
+          class="
+            hidden sm:flex items-center 
+            gap-x-2 px-2 sm:px-3
+            bg-green-100 rounded-2xl
+          "
+        >
+          <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+          <p class="text-md text-green-700">AVALABLE FOR WORK</p>
         </div>
       </div>
-      <!-- end for mobile screen -->
 
-      <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-12 sm:col-span-6 md:col-span-4 px-6 sm:px-0">
-        <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-medium text-nowrap">Front-End</h1>
-        <ul class="leading-7 lg:leading-9 ml-1">
-          <li class="truncate">Developed user interfaces with React, TypeScript, and Material UI.</li>
-          <li class="truncate">Collaborate with designer and Backend teams to ensure seamless integration of UX/UI designs and APIs.</li>
-          <li class="truncate">Develop a responsive and user friendly.</li>
-        </ul>
-        <button id="front-end-btn" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
-          Preview
-        </button>
-      </div>
-
-      <!-- start show for desktop screen -->
-      <div class="hidden md:flex flex-col justify-end w-full md:col-span-4">
-        <div class="flex flex-col justify-between gap-y-10 h-4/5 relative">
-          <h3 class="text-center text-xl font-medium">Hii, I'm Developer</h3>
-          <div id="profile-image-desktop" class="profile w-full h-[85%] xl:bg-gray-300">
-            <img src="./assets/profile/profile2.png" alt="profile" class="h-[85%]">
-          </div>
-        </div>
-      </div>
-      <!-- end show for desktop screen -->
-
-      <div class="flex flex-col justify-center gap-y-2 md:gap-y-4 col-span-12 sm:col-span-6 md:col-span-4 px-6 sm:px-0">
-        <h1 class="text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl font-medium text-nowrap">Back-End</h1>
-        <ul class="leading-7 lg:leading-9 ml-1">
-          <li class="truncate">Developed APIs using Golang for back-end.</li>
-          <li class="truncate">Managed PostgreSQL database.</li>
-          <li class="truncate">Utilized Docker and Google Cloud Platform.</li>
-        </ul>
-        <button id="back-end-btn" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-60 sm:w-[100px] lg:w-60 ml-1 mt-4 sm:mt-0">
-          Preview
-        </button>
-      </div>
-    </section>
-
-    <section id="preview-front-end" class="hidden flex items-center min-h-screen px-6 sm:px-16 lg:px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <h1 class="absolute top-[100px] left-0 w-full text-center sm:text-start lg:text-center text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-medium sm:pl-16">
-        Front-End Developer
-      </h1>
-      <div class="h-full flex flex-col gap-y-10 my-6 sm:my-12 w-full relative sm:static">
-        <button id="fe-back-btn" class=" absolute right-4 sm:right-16 lg:right-32 top-4 sm:top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-30 md:w-36">
-          Back
-          <i class="fa-solid fa-arrow-right ml-2"></i>
-        </button>
-        <div class="h-full grid grid-cols-12 gap-y-8 sm:gap-x-10 xl:gap-20 w-full">
-          <div class="col-span-12 xl:col-span-5 flex items-center">
-            <img src="./assets/profile/front-end.jpg" alt="front-end" class="max-h-[250px] sm:max-h-[380px] md:max-h-[450px] xl:max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
-          </div>
-          <div class="col-span-12 xl:col-span-7 flex flex-col gap-y-8">
-            <div class="flex flex-col justify-center w-full">
-              <div class="flex gap-x-3 gap-x-6">
-                <div class="flex items-center gap-x-2">
-                  <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-12 min-w-12 h-12 min-h-12 object-cover rounded-full">
-                </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-medium">Jun 2022 - Aug 2023:</h3>
-                  <p class="text-xl font-medium mt-1">
-                    Front-end Developer at ICreativeSystems Co.,Ltd
-                  </p>
-                </div>
-              </div>
-              <div class="md:ml-[50px] xl:ml-[30px] 2xl:ml-[72px] mt-3">
-                <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                  1. POS (Point Of Sale)
-                </p>
-                <ul class="list-disc leading-7 ml-[30px] sm:ml-[40px] mt-2">
-                  <li>
-                    Took over the project from the previous developer and continued its development to meet the client's requirements.
-                  </li>
-                  <li>
-                    Utilized Electron.js, React, TypeScript, and Material UI to develop the front-end of the POS system.
-                  </li>
-                </ul>
-              </div>
-              <div class="md:ml-[50px] xl:ml-[30px] 2xl:ml-[72px] mt-3">
-                <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                  2. HashU (Influencer Platform)
-                </p>
-                <ul class="list-disc leading-7 ml-[30px] sm:ml-[40px] mt-2">
-                  <li>Collaborated with the team to develop the "HashU" platform, which is an influencer platform.</li>
-                  <li>Utilized React, TypeScript, Material UI, and other technologies to enhance user experience and promote content creation and management within the platform.
-                    Designed and developed new features to improve usability and efficiency.</li>
-                  <li>Implemented responsive design to ensure the "HashU" platform adapts accurately and beautifully to various screen sizes and devices.</li>
-                  <li>Employed Chart.js to create various charts and graphs to display different statistics on the platform's dashboard, using data from social media sync and other sources such as total users, campaign popularity, and more.</li>
-                  <li>Implemented Firebase Cloud Messaging (FCM) to send notifications within the application, such as notifications for new member registrations, campaign status updates, and other user-related notifications.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="flex flex-col justify-center w-full">
-              <div class="flex gap-x-3 gap-x-6">
-                <div class="flex items-center gap-x-2">
-                  <img src="./assets/education/ftu-logo.png" alt="ftu" class="w-12 min-w-12 h-12 min-h-12 object-cover rounded-full">
-                </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-medium">Jun 2021 - May 2022:</h3>
-                  <p class="text-xl font-medium mt-1">
-                    Final Project at Fatoni University
-                  </p>
-                </div>
-              </div>
-              <div class="md:ml-[50px] xl:ml-[30px] 2xl:ml-[73px] mt-3">
-                <p class="text-xl font-medium mt-2">
-                  1. RRS (Room Raservation System)
-                </p>
-                <ul class="list-disc leading-7 ml-[30px] sm:ml-[40px] mt-2">
-                  <li>
-                    Designed and developed website layouts and interactions using Bootstrap, Ajax, and jQuery to enhance usability.
-                  </li>
-                  <li>
-                    Created a meeting room reservation table and allowed students to view reservation schedules and make room bookings through the platform.
-                  </li>
-                  <li>
-                    Implemented responsive design to ensure the website displays correctly on all devices.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="preview-back-end" class="hidden flex items-center min-h-screen px-6 sm:px-16 lg:px-32 pt-36 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <h1 class="absolute top-[100px] left-0 w-full text-center sm:text-start lg:text-center text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-medium sm:pl-16">
-        Back-End Developer
-      </h1>
-      <div class="h-full flex flex-col gap-y-10 my-8 w-full relative sm:static">
-        <button id="be-back-btn" class=" absolute right-4 sm:right-16 lg:right-32 top-4 sm:top-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-30 md:w-36">
-          <i class="fa-solid fa-arrow-left mr-2"></i>
-          Back
-        </button>
-        <div class="h-full grid grid-cols-12 gap-y-8 sm:gap-x-10 xl:gap-20 w-full">
-          <div class="col-span-12 xl:col-span-5 flex items-center">
-            <img src="./assets/profile/back-end.jpg" alt="back-end" class="max-h-[250px] sm:max-h-[380px] md:max-h-[450px] xl:max-h-[300px] 2xl:max-h-[450px] w-full object-cover">
-          </div>
-          <div class="col-span-12 xl:col-span-7 flex flex-col gap-y-8">
-            <div class="flex flex-col justify-center w-full">
-              <div class="flex gap-x-3 gap-x-6">
-                <div class="flex items-center gap-x-2">
-                  <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="ics" class="w-12 min-w-12 h-12 min-h-12 object-cover rounded-full">
-                </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-medium">Set - Dec 2023:</h3>
-                  <p class="text-xl font-medium mt-1">
-                    Full stack Developer at ICreativeSystems Co.,Ltd
-                  </p>
-                </div>
-              </div>
-              <div class="md:ml-[50px] xl:ml-[30px] 2xl:ml-[72px] mt-3">
-                <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                  1. HashU (Influencer Platform)
-                </p>
-                <ul class="list-disc leading-7 ml-[30px] sm:ml-[40px] mt-2">
-                  <li>Developed the back-end using Golang and PostgreSQL to efficiently and securely manage data for the "hU" platform.</li>
-                  <li>Designed and built APIs to allow the front-end application to connect and communicate with the database effectively</li>
-                  <li>Collaborated with the front-end team to understand requirements and design the back-end system to align with the functionality and usage of the application.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="flex flex-col justify-center w-full">
-              <div class="flex gap-x-3 gap-x-6">
-                <div class="flex items-center gap-x-2">
-                  <img src="./assets//education/ftu-logo.png" alt="ftu" class="w-12 min-w-12 h-12 min-h-12 object-cover rounded-full">
-                </div>
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-medium">Jun 2021 - May 2022:</h3>
-                  <p class="text-xl font-medium mt-1">
-                    Final Project at Fatoni University
-                  </p>
-                </div>
-              </div>
-              <div class="md:ml-[50px] xl:ml-[30px] 2xl:ml-[72px] mt-3">
-                <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                  1. RRS (Room Raservation System)
-                </p>
-                <ul class="list-disc leading-7 ml-[30px] sm:ml-[40px] mt-2">
-                  <li>Collaborated with a team on a university project to develop a "Room Reservation System" using PHP and MySqli.</li>
-                  <li>Designed and developed a database for meeting room reservations and user data management.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about-me" class="lg:min-h-[60vh] flex items-center py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-secondary)] text-[var(--text-color)]">
-      <div class="flex xl:gap-x-20 2xl:gap-x-40">
-        <div class="about-me-profile h-[400px] w-[600px] hidden xl:flex justify-center items-end overflow-hidden bg-blue-400 ">
-          <img src="./assets/profile/profile.png" alt="profile" class="h-[80%]">
-        </div>
-        <div class="flex flex-col justify-center gap-y-10 w-full">
-          <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">About Me</h1>
-          <p class="text-center xl:text-start text-xl lg:text-2xl indent-0 sm:indent-10 font-light tracking-wide" style="line-height: 30px;">
-            Hi, my name is Fardee Useng, a 25 year old Front-end Software Developer at ICreativeSystems. 
-            I am skilled in using JavaScript, TypeScript and React to create modern and user-friendly applications. 
-            Although I have a basic understanding of Back-end development and PostgreSQL databases, my primary interest 
-            remains in Front-end development. Additionally, I am keen on expanding my knowledge and skills into mobile 
-            application development in the future, preparing myself for new opportunities and challenges in the software 
-            industry.
+      <div class="flex py-10">
+        <div class="sm:basis-2/3 flex flex-col">
+          <h1 class="text-4xl dark:text-white">I'm Fardee Useng</h1>
+          <p class="mt-2 text-gray-600 dark:text-gray-200">
+            Frontend Developer | Passionate about creating intuitive UI/UX | 
+            React, TypeScript, Next.js
           </p>
-        </div>
-      </div>
-    </section>
+          <div class="flex gap-x-2 mt-6">
+            <a
+              href="./pdf/Fardee-Useng.pdf"
+              download
+              class="
+                inline-flex items-center
+                text-white bg-gray-800 hover:bg-gray-900
+                font-medium rounded-lg text-sm px-3 py-2
+                dark:bg-neutral-700 dark:hover:bg-neutral-900
+              "
+            >
+              <i class="fa-solid fa-download mr-2"></i>
+              Resume
+            </a>
+            <div class="relative group inline-block">
+              <button
+                onclick="copyEmail(this)"
+                class="
+                  text-gray-900 bg-white text-sm font-medium px-3 py-2
+                  border border-gray-300 hover:bg-gray-100 rounded-lg
+                  dark:text-white dark:bg-neutral-800 dark:hover:bg-neutral-700
+                "
+              >
+                <i class="fa-solid fa-copy mr-2"></i>
+                Copy Email
+              </button>
 
-    <section id="education" class="min-h-[40vh] flex flex-col lg:flex-row items-center justify-center gap-y-12 sm:gap-y-16 lg:gap-x-32 gap-y-12 lg:gap-y-0 py-[40px] lg:py-[50px] xl:py-[100px] px-6 sm:px-16 lg:px-32 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <div class="flex flex-col items-center gap-2">
-        <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-medium">Education</h3>
-        <div class="hidden md:w-full h-[10px] bg-blue-600"></div>
-      </div>
-      <div class="flex flex-col gap-y-6">
-        <div class="flex gap-x-4">
-          <div class="flex items-center">
-            <img src="./assets/education/ftu-logo.png" alt="ftu" class="min-w-10 h-10">
-          </div>
-          <div>
-            <h3 class="text-3xl font-medium">2017-2018</h3>
-            <p class="text-1xl font-medium">English Language Preparation, Fatoni University.</p>
-          </div>
-        </div>
-        <div class="w-full h-[10px] bg-gray-200"></div>
-        <div class="flex gap-x-4">
-          <div class="flex items-center">
-            <img src="./assets/education/ftu-logo.png" alt="ftu" class="min-w-10 h-10">
-          </div>
-          <div>
-            <h3 class="text-3xl font-medium">2018-2022</h3>
-            <p class="text-1xl font-medium">Bachelor's Degree in IT (Information Technology), Fatoni University</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="activity" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)]">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium text-[var(--text-color)]">Activity</h1>
-      <div id="activity-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
-      </div>
-      <button id="more-acctivity" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 w-32">
-        <i class="fa-solid fa-arrow-down mr-2"></i>
-        More
-      </button>
-    </section>
-
-    <section id="medium" class="min-h-[80vh] flex flex-col justify-center items-center gap-y-12 sm:gap-y-16 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)]">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium text-[var(--text-color)]">Medium</h1>
-      <div id="medium-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
-      </div>
-      <button id="more-medium" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 w-32">
-        <i class="fa-solid fa-arrow-down mr-2"></i>
-        More
-      </button>
-    </section>
-
-    <section id="experience" class="min-h-[70vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">Work Experience</h1>
-      <div class="flex flex-col lg:items-center xl:flex-row xl:justify-center xl:gap-x-10 2xl:gap-x-12">
-        <div class="flex flex-col gap-y-6">
-          <div class="flex gap-x-6">
-            <div class="flex items-center gap-x-2">
-              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="tiger" class="w-16 min-w-16 h-16 min-h-16 object-cover rounded-full">
+              <div
+                class="
+                  absolute bottom-full left-1/2 -translate-x-1/2 mb-2
+                  px-2 py-1 text-xs text-white bg-black rounded
+                  opacity-0 group-hover:opacity-100 pointer-events-none
+                  transition-opacity duration-300 whitespace-nowrap z-10
+                "
+                id="tooltip"
+              >
+                Copy to clipboard
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="hidden sm:flex sm:basis-1/3 justify-center items-center">
+          <div class="w-40 h-40 rounded-full flex justify-center items-center">
+            <img
+              src="./assets/profile/chibi_resized_compressed.png"
+              alt="profile"
+              class="
+                w-36 h-36 
+                object-cover rounded-full 
+                ring ring-8 dark:ring-4 ring-green-100 dark:ring-neutral-700
+              "
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about-me"
+      class="bg-gray-100 p-3 sm:p-5 sm:rounded-xl dark:bg-neutral-900"
+    >
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-user text-gray-600 dark:text-gray-300"></i>
+        <h2 class="text-gray-600 text-xl dark:text-gray-300">
+          About Me
+        </h2>
+      </div>
+      <div class="mt-2">
+        <div class="my-4 overflow-hidden rounded-md sm:rounded-xl shadow-lg">
+          <img
+            src="./assets/profile/back-end.jpg"
+            alt="team work"
+            class="h-36 sm:h-56 w-full object-cover"
+          >
+        </div>
+        <p
+          class="
+            indent-5 text-sm sm:text-md 
+            text-gray-700 dark:text-gray-200 font-light
+          "
+        >
+          I'm a Frontend Developer with over 3 years of experience 
+          building web applications using React, Next.js, and TypeScript.
+        </p>
+        <p
+          class="
+            indent-5 text-sm sm:text-md 
+            text-gray-700 dark:text-gray-200 font-light mt-2
+          "
+        >
+          I'm passionate about crafting beautiful, user-friendly, and fully 
+          responsive interfaces that work seamlessly across all devices.
+        </p>
+        <p
+          class="
+            indent-5 text-sm sm:text-md 
+            text-gray-700 dark:text-gray-200 font-light mt-2
+          "
+        >
+          Throughout my career, I've worked on a wide range of projects 
+          from corporate websites and internal dashboards to fast-loading 
+          landing pages focused on delivering an exceptional user experience.
+        </p>
+        <p
+          class="
+            indent-5 text-sm sm:text-md 
+            text-gray-700 dark:text-gray-200 font-light mt-2
+          "
+        >
+          I'm also skilled at collaborating with UX/UI designers, backend 
+          developers, and QA teams, with a strong focus on clear communication 
+          and aligning with team goals. I enjoy working in cross-functional 
+          teams where we can turn ideas into products that truly solve user needs.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="socials"
+      class="
+        p-3 sm:p-5 sm:rounded-xl
+        bg-gray-100 dark:bg-neutral-800
+        dark:border-2 dark:border-gray-500
+      "
+    >
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-globe text-gray-600 dark:text-gray-300"></i>
+        <h2 class="text-gray-600 text-xl text-gray-600 dark:text-gray-300">
+          Socials
+        </h2>
+      </div>
+      <div class="grid grid-flow-col grid-rows-4 sm:grid-rows-2 gap-4 mt-4">
+        <a
+          class="
+            row-span-1 bg-white dark:bg-neutral-950
+            rounded-md sm:rounded-2xl overflow-hidden 
+            shadow-lg hover:shadow-xl cursor-pointer
+            hover:ring hover:ring-gray-300
+          "
+          href="https://github.com/FardeeUseng"
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="h-24 relative flex justify-center items-center bg-slate-700">
+            <p class="text-3xl text-white">Github</p>
+            <div
+              class="
+                absolute left-5 -bottom-8 h-16 w-16 
+                rounded-full ring ring-white dark:ring-neutral-900 
+              "
+            >
+              <img
+                src="./assets/profile/chibi_resized_compressed.png"
+                alt="github"
+                class="rounded-full h-16 w-16 object-cover"
+              >
+            </div>
+          </div>
+          <div class="h-40 bg-white dark:bg-neutral-900 py-2">
             <div>
-              <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Jun 2022 - Aug 2023:</h3>
-              <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                Front-end Developer at ICreativeSystems Co.,Ltd
+              <h2 class="ml-24 text-lg dark:text-white">Fardee Useng</h2>
+              <p
+                class="
+                  p-4 indent-5
+                  text-sm text-gray-700 dark:text-gray-200 font-light
+                "
+              >
+                A collection of my frontend projects and open-source 
+                code built with React, Next.js, and TypeScript.
               </p>
             </div>
           </div>
-          <ul class="ml-[50px] xl:ml-[30px] 2xl:ml-[95px] list-disc sm:text-xl leading-9">
-            <li>Developed user interfaces with React, TypeScript, and Material UI.</li>
-            <li>Collaborate with designer and Backend teams to ensure seamless <br/> integration of UX/UI designs and APIs.</li>
-            <li>Develop a responsive and user friendly.</li>
-          </ul>
-        </div>
-        <div class="w-full h-2 xl:hidden bg-blue-500 my-10"></div>
-        <div class="flex flex-col gap-y-6">
-          <div class="flex gap-x-6">
-            <div class="flex items-center">
-              <img src="https://media.licdn.com/dms/image/D560BAQGHzrTlP1mddQ/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=Bqo1jfT_2yPHC4dgW--DyMorq0hl8KR_Hb18t5mySKU" alt="rabbit" class="w-16 min-w-16 h-16 min-h-16 object-cover rounded-full">
+        </a>
+        <a
+          class="
+            row-span-1 bg-white dark:bg-neutral-900
+            rounded-md sm:rounded-2xl overflow-hidden 
+            shadow-lg hover:shadow-xl cursor-pointer
+            hover:ring hover:ring-gray-300
+          "
+          href="https://www.linkedin.com/in/fardee-useng"
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="h-24 relative flex justify-center items-center bg-sky-700">
+            <p class="text-3xl text-white">LinkIn</p>
+            <div
+              class="
+                absolute left-5 -bottom-8 h-16 w-16
+                rounded-full ring ring-white dark:ring-neutral-950
+              "
+            >
+              <img
+                src="./assets/profile/profile2.jpg"
+                alt="github"
+                class="rounded-full h-16 w-16 object-cover"
+              >
             </div>
+          </div>
+          <div class="h-40 bg-white dark:bg-neutral-900 py-2">
             <div>
-              <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-medium">Set - Dec 2023: </h3>
-              <p class="text-xl 2xl:text-2xl font-medium mt-2">
-                Full stack Developer at ICreativeSystems Co.,Ltd
+              <h2 class="ml-24 text-lg dark:text-white">Fardee Useng</h2>
+              <p
+                class="
+                  p-4 indent-5
+                  text-sm text-gray-700 dark:text-gray-200 font-light
+                "
+              >
+                My professional profile, highlighting work experience, 
+                skills, and achievements as a frontend developer.
               </p>
             </div>
           </div>
-          <ul class="ml-[50px] xl:ml-[30px] 2xl:ml-[95px] list-disc sm:text-xl leading-9">
-            <li>Separated responsibilities between Front-end and Back-end.</li>
-            <li>Developed front-end using React, TypeScript, and Material UI.</li>
-            <li>Developed APIs using Golang for back-end.</li>
-            <li>Managed PostgreSQL database.</li>
-            <li>Utilized Docker and Google Cloud Platform.</li>
-          </ul>
+        </a>
+        <a
+          class="
+            row-span-1 bg-white dark:bg-neutral-900
+            rounded-md sm:rounded-2xl overflow-hidden 
+            shadow-lg hover:shadow-xl cursor-pointer
+            hover:ring hover:ring-gray-300
+          "
+          href="https://medium.com/@fardee.useng"
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="h-24 relative flex justify-center items-center bg-slate-950">
+            <p class="text-3xl text-white">Medium</p>
+            <div
+              class="
+                absolute left-5 -bottom-8 h-16 w-16 
+                rounded-full ring ring-white dark:ring-neutral-900
+              "
+            >
+              <img
+                src="./assets/profile/profile.jpg"
+                alt="github"
+                class="rounded-full h-16 w-16 object-cover"
+              >
+            </div>
+          </div>
+          <div class="h-40 bg-white dark:bg-neutral-900 py-2">
+            <div>
+              <h2 class="ml-24 text-lg dark:text-white">Fardee Useng</h2>
+              <p
+                class="
+                  p-4 indent-5
+                  text-sm text-gray-700 dark:text-gray-200 font-light
+                "
+              >
+                I write articles focused on frontend development covering 
+                topics like React Hooks, performance tips, and UI best practices.
+              </p>
+            </div>
+          </div>
+        </a>
+        <a
+          class="
+            row-span-1 bg-white dark:bg-neutral-900
+            rounded-md sm:rounded-2xl overflow-hidden 
+            shadow-lg hover:shadow-xl cursor-pointer
+            hover:ring hover:ring-gray-300
+          "
+          href="https://www.facebook.com/profile.php?id=100091415088031&locale=th_TH"
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="h-24 relative flex justify-center items-center bg-blue-950">
+            <p class="text-3xl text-white">Facebook</p>
+            <div
+              class="
+                absolute left-5 -bottom-8 h-16 w-16 
+                rounded-full ring ring-white dark:ring-neutral-900
+              "
+            >
+              <img
+                src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t39.30808-6/448601976_383798321344001_773087223717766701_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=KR2ykH0eEO4Q7kNvwH4JQHo&_nc_oc=Admc_YOvyqZLVxDuiXfl8RUJhJ--jA6y6-Pr7AUCiO2N0xD2DwL4x5_nlgL5yVaiLAQ&_nc_zt=23&_nc_ht=scontent.fbkk5-5.fna&_nc_gid=eWratB7IOxJb5_ZSElHbWg&oh=00_AfQLM-aPafwFpqW2hCgduMLjCvqGjjRMITam5scXRwSRuQ&oe=68827BF2"
+                alt="github"
+                class="rounded-full h-16 w-16 object-cover"
+              >
+            </div>
+          </div>
+          <div class="h-40 bg-white dark:bg-neutral-900 py-2">
+            <div>
+              <h2 class="ml-24 text-lg dark:text-white">ไปเที่ยวก้านนนน</h2>
+              <p
+                class="
+                  p-4 indent-5 
+                  text-sm text-gray-700 dark:text-gray-200 font-light
+                "
+              >
+                A travel page I created to share personal travel 
+                experiences, stories, and photography.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section
+      id="work-experience"
+      class="
+        p-3 sm:p-5 sm:rounded-xl
+        bg-gray-100 dark:bg-neutral-800
+        dark:border-2 dark:border-gray-500
+      "
+    >
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-briefcase text-gray-600 dark:text-gray-300"></i>
+        <h2 class="text-gray-600 dark:text-gray-300 text-xl">Work Experience</h2>
+      </div>
+      <div class="relative border-l border-gray-300 ml-4 sm:ml-7 mt-4">
+        <div class="mb-6 ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://media.licdn.com/dms/image/v2/D560BAQGHzrTlP1mddQ/company-logo_200_200/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=A8sFkX0J4kXbFFuGCyiIazKWNQqjmGJ8aoOLFQWgoGo"
+              alt="ICreativeSystems"
+            >
+          </div>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Front-end Developer at ICreativeSystems Co.,Ltd
+            </h3>
+            <time class="block text-sm text-gray-500 dark:text-gray-300 mb-2">
+              Jun 2022 - Aug 2023:
+            </time>
+            <ul
+              class="
+                list-disc ml-5 text-sm sm:text-md
+                font-light text-gray-700 dark:text-gray-200
+              "
+            >
+              <li>
+                Developed user interfaces with React, TypeScript, and Material UI
+              </li>
+              <li>
+                Collaborate with designer and Backend teams to ensure seamless 
+                integration of UX/UI designs and APIs.
+              </li>
+              <li>
+                Develop a responsive and user friendly.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-6 ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://media.licdn.com/dms/image/v2/D560BAQGHzrTlP1mddQ/company-logo_200_200/company-logo_200_200/0/1685415167802?e=2147483647&v=beta&t=A8sFkX0J4kXbFFuGCyiIazKWNQqjmGJ8aoOLFQWgoGo"
+              alt="ICreativeSystems"
+            >
+          </div>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Full-Stack Developer ICreativeSystems Co.,Ltd
+            </h3>
+            <time class="block text-sm text-gray-500 dark:text-gray-300 mb-2">
+              Set 2023 - Dec 2023
+            </time>
+            <ul
+              class="
+                list-disc ml-5 text-sm sm:text-md
+                font-light text-gray-700 dark:text-gray-200
+              "
+            >
+              <li>Separated responsibilities between Front-end and Back-end</li>
+              <li>Developed front-end using React, TypeScript, and Material UI</li>
+              <li>Developed APIs using Golang for back-end.</li>
+              <li>Managed PostgreSQL database.</li>
+              <li>Utilized Docker and Google Cloud Platform.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXj3_B7pEuxj2DxAyPlNqPvJ4lbQr-9p1mQQ&s"
+              alt="ICreativeSystems"
+            >
+          </div>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Front-End Developer at PTT Digital Solution (Outsourced Onsite)
+            </h3>
+            <time class="block text-sm text-gray-500 dark:text-gray-300 mb-2">
+              May 2024 - APR 2025
+            </time>
+            <ul
+              class="
+                list-disc ml-5 text-sm sm:text-md
+                font-light text-gray-700 dark:text-gray-200
+              "
+            >
+              <li>
+                Developed and maintained a POS BackOffice Web Application 
+                for a large-scale retail business.
+              </li>
+              <li>
+                Built the front-end using Next.js and TypeScript, ensuring 
+                scalability and performance.
+              </li>
+              <li>
+                Worked closely with back-end developers and business teams 
+                (without a dedicated UX/UI team) to design and implement 
+                UI components based on business requirements.
+              </li>
+              <li>
+                Integrated various APIs to support POS operations, data 
+                analytics, and real-time updates.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skill" class="min-h-[68vh] xl:min-h-[75vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-28 px-6 sm:px-16 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)] text-[var(--text-color)]">
-      <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">Skills</h1>
-      <div class="grid grid-cols-12 gap-[20px] xl:gap-[50px]">
-        <div class="col-span-12 lg:col-span-7 xl:col-span-6 2xl:ml-[150px]">
-          <div class="flex items-center gap-x-4">
-            <div class="w-[30px] sm:w-3 xl:w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-medium">Front-End : </h1>
+    <section
+      id="education"
+      class="
+        p-3 sm:p-5 sm:rounded-xl
+        bg-gray-100 dark:bg-neutral-800
+        dark:border-2 dark:border-gray-500
+      "
+    >
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-user-graduate text-gray-600 dark:text-gray-300"></i>
+        <h2 class="text-gray-600 text-xl dark:text-gray-300">Education</h2>
+      </div>
+      <div class="relative border-l border-gray-300 ml-4 sm:ml-7 mt-4">
+        <div class="mb-6 ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="./assets//education/ftu-logo.png"
+              alt="Fatoni University"
+            >
           </div>
-          <ul class="ml-[50px] xl:ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2 font-light">
-            <li><span class="font-medium">Language: </span>JavaScript and TypeScript.</li>
-            <li><span class="font-medium">Library & Framework: </span>ReactJs, Redux and VueJs(basic).</li>
-            <li><span class="font-medium">UI Framework: </span>Material UI, TailwindCSS and Bootstrap.</li>
-            <li><span class="font-medium">Unit Test: </span>Jest.</li>
-            <li><span class="font-medium">Others: </span>HTML, CSS and SCSS.</li>
-          </ul>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              English Language Preparation
+            </h3>
+            <div class="flex items-center gap-x-2 text-sm sm:text-md">
+              <time class="text-gray-700 dark:text-gray-300">
+                2017-2018,
+              </time>
+              <p class="text-gray-700 dark:text-gray-300">
+                Fatoni University.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-span-12 lg:col-span-5 xl:col-span-6 2xl:ml-[150px]">
-          <div class="flex items-center gap-x-4">
-            <div class="w-[30px] sm:w-3 xl:w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-medium">Back-End : </h1>
+
+        <div class="ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="./assets/education/ftu-logo.png"
+              alt="Fatoni University"
+            >
           </div>
-          <ul class="ml-[50px] xl:ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2 font-light">
-            <li><span class="font-medium">Language: </span>Golang and PHP.</li>
-            <li><span class="font-medium">Database: </span>PostgreSQL and MySQL.</li>
-          </ul>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Bachelor's Degree in IT (Information Technology)
+            </h3>
+            <div class="flex items-center gap-x-2 text-sm sm:text-md">
+              <time class="text-gray-700 dark:text-gray-300">
+                2018-2022,
+              </time>
+              <p class="text-gray-700 dark:text-gray-300">
+                Fatoni University.
+              </p>
+            </div>
+            <div class="mt-3 text-gray-700 dark:text-gray-200 text-sm sm:text-md">
+              <h3>
+                <b class="text-gray-600">Final Project :</b> Room Reservation System
+              </h3>
+              <p class="font-light indent-5">
+                An online system for booking university meeting rooms, 
+                developed to streamline and digitize the reservation 
+                process. The application was built using PHP, MySQL, 
+                Bootstrap, jQuery, and AJAX to enable real-time 
+                interaction and a responsive user interface.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-span-12 lg:col-span-6 2xl:ml-[150px]">
-          <div class="flex items-center gap-x-4">
-            <div class="w-[30px] sm:w-3 xl:w-[50px] h-3 bg-blue-500"></div>
-            <h1 class="text-2xl xl:text-3xl 2xl:text-4xl font-medium">Tools : </h1>
+      </div>
+    </section>
+    
+    <section
+      id="skills"
+      class="
+        p-3 sm:p-5 sm:rounded-xl
+        bg-gray-100 dark:bg-neutral-800
+        dark:border-2 dark:border-gray-500
+      "
+    >
+      <div class="flex items-center gap-x-3">
+        <i class="fa-solid fa-brain text-gray-600 dark:text-gray-300"></i>
+        <h2 class="text-gray-600 text-xl dark:text-gray-300">Skills</h2>
+      </div>
+      <div class="relative border-l border-gray-300 ml-4 sm:ml-7 mt-4">
+        <div class="mb-6 ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?q=80&w=1425&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="programer"
+              class="h-8 sm:h-14 w-8 sm:w-14 object-cover"
+            >
           </div>
-          <ul class="ml-[50px] xl:ml-[90px] list-disc xl:text-lg 2xl:text-xl leading-8 mt-2 font-light">
-            <li>Docker and Google Cloud Platform (Basic).</li>
-            <li>Git, Postman, Figma and SourceTree.</li>
-          </ul>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Frontend Development:
+            </h3>
+            <ul
+              class="
+                list-disc ml-5 
+                text-sm sm:text-md font-light 
+                text-gray-700 dark:text-gray-200
+              "
+            >
+              <li>
+                <b>Languages:</b> JavaScript (ES6+), TypeScript, HTML
+              </li>
+              <li>
+                <b>Frameworks & Libraries:</b> React.js, Next.js
+              </li>
+              <li>
+                <b>State Management:</b> Redux, Redux Toolkit, React Query
+              </li>
+              <li>
+                <b>UI & Styling:</b> Material-UI (MUI), Ant Design, Tailwind CSS, 
+                Bootstrap, SCSS, CSS, styled-components
+              </li>
+              <li><b>Charts & Data Visualization:</b> Chart.js</li>
+              <li><b>Animations:</b> Framer Motion</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-6 ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1555066931-78c471f0d4ea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="programer"
+              class="h-8 sm:h-14 w-8 sm:w-14 object-cover"
+            >
+          </div>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              API Development:
+            </h3>
+            <ul
+              class="
+                list-disc ml-5 
+                text-sm sm:text-md font-light 
+                text-gray-700 dark:text-gray-200
+              "
+            >
+              <li><b>Data Fetching & API Handling:</b> Axios</li>
+              <li><b>Authentication & Security:</b> NextAuth.js</li>
+              <li><b>Containerization:</b> Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ml-6">
+          <div
+            class="
+              absolute -left-4 sm:-left-7 h-8 sm:h-14 w-8 sm:w-14 overflow-hidden
+              rounded-full ring ring-blue-200 dark:ring-neutral-200
+            "
+          >
+            <img
+              src="https://plus.unsplash.com/premium_photo-1678566154673-a728037f3f00?q=80&w=702&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="programer"
+              class="h-8 sm:h-14 w-8 sm:w-14 object-cover"
+            >
+          </div>
+          <div class="ml-2 sm:ml-6">
+            <h3 class="text-md sm:text-lg text-gray-900 dark:text-white">
+              Tools & Workflow:
+            </h3>
+            <ul
+              class="
+                list-disc ml-4 
+                text-sm sm:text-md font-light  
+                text-gray-700 dark:text-gray-200
+              "
+            >
+              <li><b>Design & Prototyping:</b> Figma</li>
+              <li><b>API Testing & Development:</b> Postman</li>
+              <li><b>Version Control:</b> Git, GitHub and Gitlab</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="language" class="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-x-20 lg:gap-x-32 gap-y-12 sm:gap-y-16 md:gap-y-0 px-20 lg:px-32 py-10 sm:py-16 bg-[var(--bg-primary)] text-[var(--text-color)]">
-      <div class="flex flex-col items-center gap-4">
-        <h3 class="text-4xl xl:text-5xl 2xl:text-6xl font-medium">Language</h3>
-        <div class="w-full h-[10px] bg-blue-600 hidden md:flex"></div>
+    <section class="p-5 flex flex-col items-center my-6">
+      <div>
+        <h1 class="text-xl sm:text-3xl text-center dark:text-white">
+          Let’s build something great together.
+        </h1>
+        <p
+          class="
+            mt-2 mx-10 
+            text-sm sm:text-md text-center 
+            text-gray-500 dark:text-gray-300
+          "
+        >
+          Crafting intuitive user experiences and visually 
+          engaging interfaces through modern frontend development.
+        </p>
       </div>
-      <div class="flex flex-col gap-y-4">
-        <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
-            TH
+      <div class="flex gap-x-2 mt-6">
+        <a
+          href="./pdf/Fardee-Useng.pdf"
+          download
+          class="
+            inline-flex items-center
+            text-white bg-gray-800 hover:bg-gray-900
+            font-medium rounded-lg text-sm px-3 py-2
+            dark:bg-neutral-700 dark:hover:bg-neutral-900
+          "
+        >
+          <i class="fa-solid fa-download mr-2"></i>
+          Resume
+        </a>
+        <div class="relative group inline-block">
+          <button
+            onclick="copyEmail(this)"
+            class="
+              text-gray-900 bg-white text-sm font-medium px-3 py-2
+              border border-gray-300 hover:bg-gray-100 rounded-lg
+              dark:text-white dark:bg-neutral-800 dark:hover:bg-neutral-700
+            "
+          >
+            <i class="fa-solid fa-copy mr-2"></i>
+            Copy Email
+          </button>
+
+          <div
+            class="
+              absolute bottom-full left-1/2 -translate-x-1/2 mb-2
+              px-2 py-1 text-xs text-white bg-black rounded
+              opacity-0 group-hover:opacity-100 pointer-events-none
+              transition-opacity duration-300 whitespace-nowrap z-10
+            "
+            id="tooltip"
+          >
+            Copy to clipboard
           </div>
-          <h3 class="xl:text-2xl 2xl:text-3xl font-medium">Thai: Native</h3>
-        </div>
-        <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
-        <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
-            EN
-          </div>
-          <h3 class="xl:text-2xl 2xl:text-3xl font-medium">English: Proficient</h3>
-        </div>
-        <div class="w-full h-[5px] md:h-[7px] bg-gray-200"></div>
-        <div class="flex items-center gap-x-4">
-          <div class="flex items-center justify-center rounded-lg shadow-2xl shadow-slate-300 h-8 w-8 font-medium bg-[var(--text-color)] text-[var(--bg-primary)]">
-            MY
-          </div>
-          <h3 class="xl:text-2xl 2xl:text-3xl font-medium">Malay: Proficient</h3>
         </div>
       </div>
     </section>
 
-    <button id="back-to-top-btn" class="hidden fixed bottom-4 right-4 animate-bounce bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>    
+    <footer
+      class="
+        flex items-center justify-center h-20
+        rounded-xl bg-gray-100 dark:bg-neutral-700 shadow-lg
+      "
+    >
+      <p class="text-center text-gray-500 dark:text-gray-200">
+        Copy Right © 2023 FARDEE USENG. All rights reserved.
+      </p>
+    </footer>
   </main>
 
-  <footer id="contact-me" class="min-h-[30vh] flex flex-col justify-center gap-y-12 sm:gap-y-16 xl:gap-y-20 2xl:gap-y-22 px-20 lg:px-32 py-10 sm:py-16 bg-[var(--bg-secondary)] text-[var(--text-color)]">
-    <h1 class="text-center text-4xl xl:text-5xl 2xl:text-6xl font-medium">Contact Me</h1>
-    <div class="flex flex-wrap justify-center gap-x-10 gap-y-5">
-      <div class="flex items-center gap-x-3">
-        <i class="fa-solid fa-phone text-xl md:text-2xl"></i>
-        <p class="text-xl truncate font-light">
-          <span class="font-medium">Phone: </span>065-0505-204
-        </p>
-      </div>
-      <div class="flex items-center gap-x-3">
-        <i class="fa-solid fa-envelope text-xl md:text-2xl"></i>
-        <p class="text-xl truncate font-light">
-          <span class="font-medium">E-mail: </span>fardee.tat@gmail.com
-        </p>
-      </div>
-      <div class="flex items-center gap-x-3">
-        <i class="fa-brands fa-line text-xl md:text-2xl"></i>
-        <p class="text-xl font-light">
-          <span class="font-medium">Line ID: </span>tat_28204
-        </p>
-      </div>
-      <div class="flex items-center gap-x-3">
-        <i class="fa-brands fa-linkedin text-xl md:text-2xl"></i>
-        <p class="text-xl truncate font-light">
-          <span class="font-medium">LinkedIn: </span>
-          <a href="https://www.linkedin.com/in/fardee-useang-060b88264/" target="_blank" rel="noopener noreferrer">Fardee Useng</a>
-        </p>          
-      </div>
-    </div>
-  </footer>
   <!-- vanila.js -->
-  <script src="./script.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
